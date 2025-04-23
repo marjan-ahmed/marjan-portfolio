@@ -1,17 +1,24 @@
+"use client"
+
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Github, Linkedin, Mail, ExternalLink, Send } from "lucide-react"
+import { Github, Linkedin, Mail, ExternalLink, Send, Menu, X } from "lucide-react"
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <main className="min-h-screen bg-black text-white">
       {/* Navigation */}
       <nav className="flex justify-center items-center py-6">
         <div className="container max-w-6xl px-4 flex justify-between items-center">
-          <div className="flex items-center space-x-8">
-            <Link href="/" className="text-white hover:text-purple-500 transition-colors">
-              marjan.
-            </Link>
+          <Link href="/" className="text-white text-xl hover:text-purple-500 transition-colors">
+            marjan <span className="text-3xl hover:text-bg-white  text-purple-600">.</span> 
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
             <Link href="#education" className="text-gray-400 hover:text-purple-500 transition-colors">
               education
             </Link>
@@ -25,7 +32,9 @@ export default function Home() {
               contact
             </Link>
           </div>
-          <div className="flex items-center space-x-4">
+
+          {/* Social Icons - Desktop */}
+          <div className="hidden md:flex items-center space-x-4">
             <Link href="https://github.com/marjan-ahmed" target="_blank" aria-label="GitHub">
               <Github className="w-5 h-5 text-gray-400 hover:text-white transition-colors" />
             </Link>
@@ -36,36 +45,96 @@ export default function Home() {
               <Mail className="w-5 h-5 text-gray-400 hover:text-white transition-colors" />
             </Link>
           </div>
+
+          {/* Mobile Menu Button */}
+            <button
+              className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
         </div>
       </nav>
 
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-black/95 fixed inset-0 z-50 flex flex-col items-center justify-center">
+          <button
+            className="absolute top-6 right-6 text-gray-400 hover:text-white"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <X className="w-6 h-6" />
+          </button>
+          <div className="flex flex-col items-center space-y-8 text-xl">
+            <Link
+              href="#education"
+              className="text-gray-400 hover:text-purple-500 transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              education
+            </Link>
+            <Link
+              href="#experience"
+              className="text-gray-400 hover:text-purple-500 transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              experience
+            </Link>
+            <Link
+              href="#projects"
+              className="text-gray-400 hover:text-purple-500 transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              projects
+            </Link>
+            <Link
+              href="#contact"
+              className="text-gray-400 hover:text-purple-500 transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              contact
+            </Link>
+          </div>
+          <div className="flex items-center space-x-6 mt-12">
+            <Link href="https://github.com/marjan-ahmed" target="_blank" aria-label="GitHub">
+              <Github className="w-6 h-6 text-gray-400 hover:text-white transition-colors" />
+            </Link>
+            <Link href="https://linkedin.com/in/hafizmarjanahmed" target="_blank" aria-label="LinkedIn">
+              <Linkedin className="w-6 h-6 text-gray-400 hover:text-white transition-colors" />
+            </Link>
+            <Link href="mailto:marjanahmed.dev@gmail.com" aria-label="Email">
+              <Mail className="w-6 h-6 text-gray-400 hover:text-white transition-colors" />
+            </Link>
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
-      <section className="py-20">
+      <section className="py-12 sm:py-16 md:py-20">
         <div className="container max-w-6xl px-4 mx-auto">
-          <div className="flex flex-col md:flex-row items-start justify-between">
-            <div className="md:w-1/2">
-              <h1 className="text-5xl font-bold mb-8 tracking-tight">Hi, I'm Marjan</h1>
+          <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
+            <div className="md:w-1/2 text-center md:text-left">
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6 md:mb-8 tracking-tight">Hi, I'm Marjan</h1>
               <p className="text-gray-400 mb-2 font-light">
                 During these <span className="text-white">4 years</span> as Front-End Software Engineer. My role has
                 extended beyond coding to effective communication with various departments, to define new features and
                 spearheading the development of new apps.
               </p>
-              <div className="mt-10 flex items-center space-x-6">
-              <a
-  href="/Marjan Resume.pdf"
-  download
-  className="bg-transparent hover:bg-white/10 text-white px-6 py-2 rounded-full border border-white/20 transition-colors"
->
-  Download CV
-</a>
-
+              <div className="mt-8 md:mt-10 flex items-center justify-center md:justify-start space-x-6">
+                <a
+                  href="/Marjan Resume.pdf"
+                  download
+                  className="bg-transparent hover:bg-white/10 text-white px-5 sm:px-6 py-2 rounded-full border border-white/20 transition-colors"
+                >
+                  Download CV
+                </a>
                 <Link href="#experience" className="text-gray-400 hover:text-white transition-colors">
                   See experience
                 </Link>
               </div>
             </div>
-            <div className="md:w-1/2 flex justify-end mt-10 md:mt-0">
-              <div className="relative w-64 h-64">
+            <div className="md:w-1/2 flex justify-center md:justify-end mt-10 md:mt-0">
+              <div className="relative w-56 h-56 sm:w-64 sm:h-64">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-400 to-teal-300 opacity-20 blur-xl"></div>
                 <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-black">
                   <Image src="/coding_table.jpeg" alt="Lucas" fill className="object-cover" priority />
@@ -77,48 +146,48 @@ export default function Home() {
       </section>
 
       {/* Education Section */}
-      <section className="py-20 border-t border-gray-800" id="education">
+      <section className="py-12 sm:py-16 md:py-20 border-t border-gray-800" id="education">
         <div className="container max-w-6xl px-4 mx-auto">
           <div className="flex flex-col md:flex-row items-start">
-            <div className="md:w-1/4 mb-10 md:mb-0">
-              <h2 className="text-6xl font-bold tracking-tighter">EDU</h2>
+            <div className="md:w-1/4 mb-8 md:mb-0 text-center md:text-left">
+              <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter">EDU</h2>
               <p className="text-gray-400 mt-2 font-light">My academic journey</p>
             </div>
             <div className="md:w-3/4">
-              <div className="grid gap-8">
-                <div className="border border-gray-800 rounded-xl p-6 hover:border-purple-500 transition-colors">
-                  <div className="flex justify-between items-start">
+              <div className="grid gap-6 sm:gap-8">
+                <div className="border border-gray-800 rounded-xl p-4 sm:p-6 hover:border-purple-500 transition-colors">
+                  <div className="flex flex-col sm:flex-row justify-between items-start">
                     <div>
                       <h3 className="text-xl font-medium mb-1">Matriculation</h3>
                       <p className="text-gray-400 font-light">Nasra School</p>
                     </div>
-                    <span className="text-gray-400 font-light">2021 - 2025</span>
+                    <span className="text-gray-400 font-light mt-2 sm:mt-0">2021 - 2025</span>
                   </div>
                   <p className="mt-4 text-gray-400 font-light">
                     Focused on web development, algorithms, and software engineering principles. Graduated with honors.
                   </p>
                 </div>
 
-                <div className="border border-gray-800 rounded-xl p-6 hover:border-purple-500 transition-colors">
-                  <div className="flex justify-between items-start">
+                <div className="border border-gray-800 rounded-xl p-4 sm:p-6 hover:border-purple-500 transition-colors">
+                  <div className="flex flex-col sm:flex-row justify-between items-start">
                     <div>
                       <h3 className="text-xl font-medium mb-1">WordPress Development Certification</h3>
                       <p className="text-gray-400 font-light">Professional Technologies</p>
                     </div>
-                    <span className="text-gray-400 font-light">2023</span>
+                    <span className="text-gray-400 font-light mt-2 sm:mt-0">2023</span>
                   </div>
                   <p className="mt-4 text-gray-400 font-light">
                     Advanced course covering React, Redux, and modern frontend architecture patterns.
                   </p>
                 </div>
 
-                <div className="border border-gray-800 rounded-xl p-6 hover:border-purple-500 transition-colors">
-                  <div className="flex justify-between items-start">
+                <div className="border border-gray-800 rounded-xl p-4 sm:p-6 hover:border-purple-500 transition-colors">
+                  <div className="flex flex-col sm:flex-row justify-between items-start">
                     <div>
                       <h3 className="text-xl font-medium mb-1">Agentic AI Developer</h3>
                       <p className="text-gray-400 font-light">GIAIC - Governor Initiative for AI and Computing</p>
                     </div>
-                    <span className="text-gray-400 font-light">2022</span>
+                    <span className="text-gray-400 font-light mt-2 sm:mt-0">2022</span>
                   </div>
                   <p className="mt-4 text-gray-400 font-light">
                     Specialized training in React Native and cross-platform mobile application development.
@@ -131,15 +200,15 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section className="py-20 border-t border-gray-800" id="experience">
+      <section className="py-12 sm:py-16 md:py-20 border-t border-gray-800" id="experience">
         <div className="container max-w-6xl px-4 mx-auto">
           <div className="flex flex-col md:flex-row items-start">
-            <div className="md:w-1/4 mb-10 md:mb-0">
+            <div className="md:w-1/4 mb-8 md:mb-0 text-center md:text-left">
               <p className="text-gray-400 font-light">4 years of</p>
-              <h2 className="text-6xl font-bold tracking-tighter">XP</h2>
+              <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter">XP</h2>
               <p className="text-gray-400 mt-2 font-light">with the most popular ecosystem around</p>
             </div>
-            <div className="md:w-3/4 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="md:w-3/4 grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               <div className="bg-[#d8d5a2] rounded-3xl p-6 flex flex-col justify-between h-40">
                 <div className="bg-[#b3ad64] text-black w-10 h-10 rounded-lg flex items-center justify-center font-bold">
                   JS
@@ -172,7 +241,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex justify-center mt-8">
+          <div className="hidden md:flexjustify-center mt-8">
             <div className="flex space-x-2">
               <div className="w-6 h-2 bg-white rounded-full"></div>
               <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
@@ -184,32 +253,32 @@ export default function Home() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20">
+      <section className="py-12 sm:py-16 md:py-20">
         <div className="container max-w-6xl px-4 mx-auto text-center">
-          <h2 className="text-5xl bg-gradient-to-r from-purple-500 to-purple-300 bg-clip-text text-transparent font-bold mb-8 tracking-tight">
+          <h2 className="text-4xl sm:text-5xl bg-gradient-to-r from-purple-500 to-purple-300 bg-clip-text text-transparent font-bold mb-6 sm:mb-8 tracking-tight">
             Javascript
           </h2>
-          <h2 className="text-5xl bg-gradient-to-r from-purple-500 to-purple-300 bg-clip-text text-transparent font-bold mb-8 tracking-tight">
+          <h2 className="text-4xl sm:text-5xl bg-gradient-to-r from-purple-500 to-purple-300 bg-clip-text text-transparent font-bold mb-6 sm:mb-8 tracking-tight">
             React
           </h2>
-          <h2 className="text-5xl bg-gradient-to-r from-purple-500 to-purple-300 bg-clip-text text-transparent font-bold mb-8 tracking-tight">
+          <h2 className="text-4xl sm:text-5xl bg-gradient-to-r from-purple-500 to-purple-300 bg-clip-text text-transparent font-bold mb-6 sm:mb-8 tracking-tight">
             Coffee
           </h2>
         </div>
       </section>
 
       {/* Skills Section */}
-      <section className="py-20">
+      <section className="py-12 sm:py-16 md:py-20">
         <div className="container max-w-6xl px-4 mx-auto">
-          <h2 className="text-4xl font-bold mb-16 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-10 sm:mb-16 tracking-tight text-center md:text-left">
             These are the technologies
-            <br />
+            <br className="hidden md:block" />
             that I've been using
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* Publications */}
-            <div>
+            <div className="mb-8 sm:mb-0">
               <h3 className="text-sm text-gray-400 mb-4 font-light">Publications in both stores</h3>
               <div className="space-y-3">
                 <div className="flex items-center">
@@ -252,7 +321,7 @@ export default function Home() {
             </div>
 
             {/* Front-end Engineer Design */}
-            <div>
+            <div className="mb-8 sm:mb-0">
               <h3 className="text-sm text-gray-400 mb-4 font-light">Front-end Engineer Design</h3>
               <div className="space-y-3">
                 <div className="flex items-center">
@@ -301,7 +370,7 @@ export default function Home() {
             </div>
 
             {/* Languages */}
-            <div>
+            <div className="mb-8 sm:mb-0">
               <h3 className="text-sm text-gray-400 mb-4 font-light">Languages</h3>
               <div className="space-y-3">
                 <div className="flex items-center">
@@ -320,7 +389,7 @@ export default function Home() {
             </div>
 
             {/* DevOps */}
-            <div>
+            <div className="mb-8 sm:mb-0">
               <h3 className="text-sm text-gray-400 mb-4 font-light">DevOps</h3>
               <div className="space-y-3">
                 <div className="flex items-center">
@@ -378,24 +447,28 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 border-t border-gray-800" id="projects">
+      <section className="py-12 sm:py-16 md:py-20 border-t border-gray-800" id="projects">
         <div className="container max-w-6xl px-4 mx-auto">
           <div className="flex flex-col md:flex-row items-start">
-            <div className="md:w-1/4 mb-10 md:mb-0">
-              <h2 className="text-6xl font-bold tracking-tighter">PRO</h2>
+            <div className="md:w-1/4 mb-8 md:mb-0 text-center md:text-left">
+              <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter">PRO</h2>
               <p className="text-gray-400 mt-2 font-light">Selected projects I've worked on</p>
             </div>
             <div className="md:w-3/4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 {/* Project 1 */}
                 <div className="border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500 transition-colors">
                   <div className="relative h-48 bg-gray-900">
                     <Image src="/project1.png" alt="E-commerce App" fill className="object-cover opacity-80" />
                   </div>
-                  <div className="p-6">
+                  <div className="p-4 sm:p-6">
                     <div className="flex justify-between items-start mb-4">
                       <h3 className="text-xl font-medium">Nike Clone Website</h3>
-                      <Link href="https://nike-clone-version.vercel.app" target="_blank" className="text-gray-400 hover:text-white">
+                      <Link
+                        href="https://nike-clone-version.vercel.app"
+                        target="_blank"
+                        className="text-gray-400 hover:text-white"
+                      >
                         <ExternalLink className="w-5 h-5" />
                       </Link>
                     </div>
@@ -417,10 +490,14 @@ export default function Home() {
                   <div className="relative h-48 bg-gray-900">
                     <Image src="/project2.png" alt="Fitness Tracker" fill className="object-cover opacity-80" />
                   </div>
-                  <div className="p-6">
+                  <div className="p-4 sm:p-6">
                     <div className="flex justify-between items-start mb-4">
                       <h3 className="text-xl font-medium">Fitness Tracker</h3>
-                      <Link href="https://hekto-store.vercel.app/" target="_blank" className="text-gray-400 hover:text-white">
+                      <Link
+                        href="https://hekto-store.vercel.app/"
+                        target="_blank"
+                        className="text-gray-400 hover:text-white"
+                      >
                         <ExternalLink className="w-5 h-5" />
                       </Link>
                     </div>
@@ -445,10 +522,14 @@ export default function Home() {
                       className="object-cover opacity-80"
                     />
                   </div>
-                  <div className="p-6">
+                  <div className="p-4 sm:p-6">
                     <div className="flex justify-between items-start mb-4">
                       <h3 className="text-xl font-medium">Task Management Dashboard</h3>
-                      <Link href="https://marvix-blog.vercel.app/" target="_blank" className="text-gray-400 hover:text-white">
+                      <Link
+                        href="https://marvix-blog.vercel.app/"
+                        target="_blank"
+                        className="text-gray-400 hover:text-white"
+                      >
                         <ExternalLink className="w-5 h-5" />
                       </Link>
                     </div>
@@ -468,10 +549,14 @@ export default function Home() {
                   <div className="relative h-48 bg-gray-900">
                     <Image src="/project4.png" alt="AI Content Generator" fill className="object-cover opacity-80" />
                   </div>
-                  <div className="p-6">
+                  <div className="p-4 sm:p-6">
                     <div className="flex justify-between items-start mb-4">
                       <h3 className="text-xl font-medium">AI Content Generator</h3>
-                      <Link href="https://clima-webapp-project.vercel.app/" target="_blank" className="text-gray-400 hover:text-white">
+                      <Link
+                        href="https://clima-webapp-project.vercel.app/"
+                        target="_blank"
+                        className="text-gray-400 hover:text-white"
+                      >
                         <ExternalLink className="w-5 h-5" />
                       </Link>
                     </div>
@@ -486,44 +571,21 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
-              {/* <div className="border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500 transition-colors">
-                  <div className="relative h-48 bg-gray-900">
-                    <Image src="/project4.png" alt="AI Content Generator" fill className="object-cover opacity-80" />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-4">
-                      <h3 className="text-xl font-medium">AI Content Generator</h3>
-                      <Link href="https://example.com" target="_blank" className="text-gray-400 hover:text-white">
-                        <ExternalLink className="w-5 h-5" />
-                      </Link>
-                    </div>
-                    <p className="text-gray-400 font-light mb-4">
-                      Web application that leverages AI to generate marketing content and social media posts.
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Next.js</span>
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">OpenAI API</span>
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">TypeScript</span>
-                    </div>
-                  </div>
-                </div> */}
-              
             </div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 border-t border-gray-800" id="contact">
+      <section className="py-12 sm:py-16 md:py-20 border-t border-gray-800" id="contact">
         <div className="container max-w-6xl px-4 mx-auto">
           <div className="flex flex-col md:flex-row items-start">
-            <div className="md:w-1/4 mb-10 md:mb-0">
-              <h2 className="text-6xl font-bold tracking-tighter">SAY HI</h2>
+            <div className="md:w-1/4 mb-8 md:mb-0 text-center md:text-left">
+              <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter">SAY HI</h2>
               <p className="text-gray-400 mt-2 font-light">Let's work together</p>
             </div>
             <div className="md:w-3/4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                   <form className="space-y-6">
                     <div>
@@ -561,7 +623,7 @@ export default function Home() {
                     </div>
                     <button
                       type="submit"
-                      className="bg-gradient-to-r from-purple-600 to-purple-400 text-white px-6 py-3 rounded-lg flex items-center justify-center hover:opacity-90 transition-opacity"
+                      className="bg-purple-600 text-white px-6 py-3 rounded-lg flex items-center justify-center hover:opacity-90 transition-opacity w-full sm:w-auto"
                     >
                       Send Message
                       <Send className="w-4 h-4 ml-2" />
@@ -619,7 +681,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 border-t border-gray-800">
+      <footer className="py-12 sm:py-16 border-t border-gray-800">
         <div className="container max-w-6xl px-4 mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 mb-4 md:mb-0 font-light">Follow me</p>
