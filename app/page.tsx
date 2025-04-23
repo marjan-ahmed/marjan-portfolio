@@ -1,12 +1,28 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Github, Linkedin, Mail, ExternalLink, Send, Menu, X } from "lucide-react"
+import AOS from "aos"
+import "aos/dist/aos.css"
+import { FaDocker, FaFigma, FaNode, FaReact } from "react-icons/fa"
+import { TbBrandNextjs, TbBrandReactNative } from "react-icons/tb"
+import { SiNginx, SiPrisma, SiVite } from "react-icons/si"
+import { IoLogoJavascript } from "react-icons/io"
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const data = new Date()
+  const currYear = data.getFullYear()
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    })
+  }, [])
 
   return (
     <main className="min-h-screen bg-black text-white">
@@ -14,7 +30,7 @@ export default function Home() {
       <nav className="flex justify-center items-center py-6">
         <div className="container max-w-6xl px-4 flex justify-between items-center">
           <Link href="/" className="text-white text-xl hover:text-purple-500 transition-colors">
-            marjan <span className="text-3xl hover:text-bg-white  text-purple-600">.</span> 
+            marjan <span className="text-3xl hover:text-bg-white  text-purple-600">.</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -47,12 +63,12 @@ export default function Home() {
           </div>
 
           {/* Mobile Menu Button */}
-            <button
-              className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+          <button
+            className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
       </nav>
 
@@ -150,12 +166,17 @@ export default function Home() {
         <div className="container max-w-6xl px-4 mx-auto">
           <div className="flex flex-col md:flex-row items-start">
             <div className="md:w-1/4 mb-8 md:mb-0 text-center md:text-left">
-              <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter">EDU</h2>
+              <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter" data-aos="zoom-in-down">
+                EDU
+              </h2>
               <p className="text-gray-400 mt-2 font-light">My academic journey</p>
             </div>
             <div className="md:w-3/4">
               <div className="grid gap-6 sm:gap-8">
-                <div className="border border-gray-800 rounded-xl p-4 sm:p-6 hover:border-purple-500 transition-colors">
+                <div
+                  data-aos="fade-right"
+                  className="border border-gray-800 rounded-xl p-4 sm:p-6 hover:border-purple-500 transition-colors"
+                >
                   <div className="flex flex-col sm:flex-row justify-between items-start">
                     <div>
                       <h3 className="text-xl font-medium mb-1">Matriculation</h3>
@@ -168,7 +189,10 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="border border-gray-800 rounded-xl p-4 sm:p-6 hover:border-purple-500 transition-colors">
+                <div
+                  data-aos="fade-right"
+                  className="border border-gray-800 rounded-xl p-4 sm:p-6 hover:border-purple-500 transition-colors"
+                >
                   <div className="flex flex-col sm:flex-row justify-between items-start">
                     <div>
                       <h3 className="text-xl font-medium mb-1">WordPress Development Certification</h3>
@@ -181,7 +205,10 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="border border-gray-800 rounded-xl p-4 sm:p-6 hover:border-purple-500 transition-colors">
+                <div
+                  data-aos="fade-right"
+                  className="border border-gray-800 rounded-xl p-4 sm:p-6 hover:border-purple-500 transition-colors"
+                >
                   <div className="flex flex-col sm:flex-row justify-between items-start">
                     <div>
                       <h3 className="text-xl font-medium mb-1">Agentic AI Developer</h3>
@@ -190,7 +217,8 @@ export default function Home() {
                     <span className="text-gray-400 font-light mt-2 sm:mt-0">2022</span>
                   </div>
                   <p className="mt-4 text-gray-400 font-light">
-                    Specialized training in React Native and cross-platform mobile application development.
+                    Specialized training in TypeScript, Next.js and Python technologies Pandas, Numpy for future AI
+                    Agents.
                   </p>
                 </div>
               </div>
@@ -205,17 +233,27 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-start">
             <div className="md:w-1/4 mb-8 md:mb-0 text-center md:text-left">
               <p className="text-gray-400 font-light">4 years of</p>
-              <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter">XP</h2>
+              <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter" data-aos="zoom-in-down">
+                XP
+              </h2>
               <p className="text-gray-400 mt-2 font-light">with the most popular ecosystem around</p>
             </div>
             <div className="md:w-3/4 grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              <div className="bg-[#d8d5a2] rounded-3xl p-6 flex flex-col justify-between h-40">
+              <div
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                className="bg-[#d8d5a2] rounded-3xl p-6 flex flex-col justify-between h-40"
+              >
                 <div className="bg-[#b3ad64] text-black w-10 h-10 rounded-lg flex items-center justify-center font-bold">
                   JS
                 </div>
                 <div className="text-black font-medium">JavaScript</div>
               </div>
-              <div className="bg-[#83a5b8] rounded-3xl p-6 flex flex-col justify-between h-40">
+              <div
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                className="bg-[#83a5b8] rounded-3xl p-6 flex flex-col justify-between h-40"
+              >
                 <div className="text-[#61dafb]">
                   <svg
                     viewBox="0 0 24 24"
@@ -233,7 +271,11 @@ export default function Home() {
                 </div>
                 <div className="text-black font-medium">React</div>
               </div>
-              <div className="bg-[#d3d3d3] rounded-3xl p-6 flex flex-col justify-between h-40">
+              <div
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                className="bg-[#d3d3d3] rounded-3xl p-6 flex flex-col justify-between h-40"
+              >
                 <div className="bg-black text-white w-10 h-10 rounded-lg flex items-center justify-center font-bold">
                   N
                 </div>
@@ -255,13 +297,22 @@ export default function Home() {
       {/* Technologies Section */}
       <section className="py-12 sm:py-16 md:py-20">
         <div className="container max-w-6xl px-4 mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl bg-gradient-to-r from-purple-500 to-purple-300 bg-clip-text text-transparent font-bold mb-6 sm:mb-8 tracking-tight">
+          <h2
+            data-aos="fade-down"
+            className="text-4xl sm:text-5xl bg-gradient-to-r from-purple-500 to-purple-300 bg-clip-text text-transparent font-bold mb-6 sm:mb-8 tracking-tight"
+          >
             Javascript
           </h2>
-          <h2 className="text-4xl sm:text-5xl bg-gradient-to-r from-purple-500 to-purple-300 bg-clip-text text-transparent font-bold mb-6 sm:mb-8 tracking-tight">
+          <h2
+            data-aos="fade-down"
+            className="text-4xl sm:text-5xl bg-gradient-to-r from-purple-500 to-purple-300 bg-clip-text text-transparent font-bold mb-6 sm:mb-8 tracking-tight"
+          >
             React
           </h2>
-          <h2 className="text-4xl sm:text-5xl bg-gradient-to-r from-purple-500 to-purple-300 bg-clip-text text-transparent font-bold mb-6 sm:mb-8 tracking-tight">
+          <h2
+            data-aos="fade-down"
+            className="text-4xl sm:text-5xl bg-gradient-to-r from-purple-500 to-purple-300 bg-clip-text text-transparent font-bold mb-6 sm:mb-8 tracking-tight"
+          >
             Coffee
           </h2>
         </div>
@@ -276,9 +327,9 @@ export default function Home() {
             that I've been using
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-1">
             {/* Publications */}
-            <div className="mb-8 sm:mb-0">
+            <div data-aos="fade-up" className="border-1 border-gray-800 p-4 rounded-2xl mb-8 sm:mb-0">
               <h3 className="text-sm text-gray-400 mb-4 font-light">Publications in both stores</h3>
               <div className="space-y-3">
                 <div className="flex items-center">
@@ -321,48 +372,54 @@ export default function Home() {
             </div>
 
             {/* Front-end Engineer Design */}
-            <div className="mb-8 sm:mb-0">
+            <div data-aos="fade-up" className="border-1 border-gray-800 p-4 rounded-2xl mb-8 sm:mb-0">
               <h3 className="text-sm text-gray-400 mb-4 font-light">Front-end Engineer Design</h3>
               <div className="space-y-3">
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-[#61dafb] rounded-full flex items-center justify-center">
-                    <span className="text-xs text-black">R</span>
+                    <span className="text-s text-black">
+                      <FaReact />
+                    </span>
                   </div>
                   <span className="text-sm">React JS</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-[#61dafb] rounded-full flex items-center justify-center">
-                    <span className="text-xs text-black">R</span>
+                    <span className="text-s text-black">
+                      <TbBrandReactNative />
+                    </span>
                   </div>
                   <span className="text-sm">React Native</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-black rounded-full flex items-center justify-center border border-white/20">
-                    <span className="text-xs">N</span>
+                    <span className="text-s">
+                      <TbBrandNextjs />
+                    </span>
                   </div>
                   <span className="text-sm">Next.JS</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-purple-600 rounded-full flex items-center justify-center">
-                    <span className="text-xs">V</span>
+                    <span className="text-s">
+                      <SiVite />
+                    </span>
                   </div>
                   <span className="text-sm">Vite</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-black rounded-full flex items-center justify-center border border-white/20">
-                    <span className="text-xs">F</span>
+                    <span className="text-s">
+                      <FaFigma />
+                    </span>
                   </div>
                   <span className="text-sm">Figma</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-red-500 rounded-full flex items-center justify-center">
-                    <span className="text-xs">J</span>
-                  </div>
-                  <span className="text-sm">Jest</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-6 h-6 mr-2 bg-red-500 rounded-full flex items-center justify-center">
-                    <span className="text-xs">R</span>
+                    <span className="text-xs">
+                      <FaReact />
+                    </span>
                   </div>
                   <span className="text-sm">React Testing Library</span>
                 </div>
@@ -370,12 +427,14 @@ export default function Home() {
             </div>
 
             {/* Languages */}
-            <div className="mb-8 sm:mb-0">
+            <div data-aos="fade-up" className="border-1 border-gray-800 p-4 rounded-2xl mb-8 sm:mb-0">
               <h3 className="text-sm text-gray-400 mb-4 font-light">Languages</h3>
               <div className="space-y-3">
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-yellow-400 rounded-full flex items-center justify-center">
-                    <span className="text-xs text-black">JS</span>
+                    <span className="text-s text-black">
+                      <IoLogoJavascript />
+                    </span>
                   </div>
                   <span className="text-sm">JavaScript</span>
                 </div>
@@ -389,7 +448,7 @@ export default function Home() {
             </div>
 
             {/* DevOps */}
-            <div className="mb-8 sm:mb-0">
+            <div data-aos="fade-up" className="mb-8 sm:mb-0 border-1 border-gray-800 p-4 rounded-2xl">
               <h3 className="text-sm text-gray-400 mb-4 font-light">DevOps</h3>
               <div className="space-y-3">
                 <div className="flex items-center">
@@ -411,13 +470,17 @@ export default function Home() {
                 </div>
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-xs">N</span>
+                    <span className="text-s">
+                      <SiNginx />
+                    </span>
                   </div>
                   <span className="text-sm">Nginx</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-blue-600 rounded-full flex items-center justify-center">
-                    <span className="text-xs">D</span>
+                    <span className="text-s">
+                      <FaDocker />
+                    </span>
                   </div>
                   <span className="text-sm">Docker</span>
                 </div>
@@ -425,18 +488,22 @@ export default function Home() {
             </div>
 
             {/* Back-end */}
-            <div>
+            <div data-aos="fade-up" className="border-1 border-gray-800 p-4 rounded-2xl">
               <h3 className="text-sm text-gray-400 mb-4 font-light">Back-end</h3>
               <div className="space-y-3">
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-xs">N</span>
+                    <span className="text-s">
+                      <FaNode />
+                    </span>
                   </div>
                   <span className="text-sm">Node.js</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-purple-700 rounded-full flex items-center justify-center">
-                    <span className="text-xs">P</span>
+                    <span className="text-s">
+                      <SiPrisma />
+                    </span>
                   </div>
                   <span className="text-sm">Prisma</span>
                 </div>
@@ -455,122 +522,225 @@ export default function Home() {
               <p className="text-gray-400 mt-2 font-light">Selected projects I've worked on</p>
             </div>
             <div className="md:w-3/4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-                {/* Project 1 */}
-                <div className="border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500 transition-colors">
-                  <div className="relative h-48 bg-gray-900">
-                    <Image src="/project1.png" alt="E-commerce App" fill className="object-cover opacity-80" />
-                  </div>
-                  <div className="p-4 sm:p-6">
-                    <div className="flex justify-between items-start mb-4">
-                      <h3 className="text-xl font-medium">Nike Clone Website</h3>
-                      <Link
-                        href="https://nike-clone-version.vercel.app"
-                        target="_blank"
-                        className="text-gray-400 hover:text-white"
-                      >
-                        <ExternalLink className="w-5 h-5" />
-                      </Link>
-                    </div>
-                    <p className="text-gray-400 font-light mb-4">
-                      A full-featured e-commerce platform built with React, Next.js, and Stripe integration.
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Next.js</span>
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Tailwind</span>
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">ShadCN</span>
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Supabase</span>
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Stripe</span>
-                    </div>
-                  </div>
-                </div>
+              <Tabs defaultValue="nextjs" className="w-full">
+                <TabsList className="mb-6 bg-neutral-200 w-full">
+                  <TabsTrigger value="html">HTML, CSS, JS</TabsTrigger>
+                  <TabsTrigger value="nextjs">Next.js</TabsTrigger>
+                  <TabsTrigger value="python">Python</TabsTrigger>
+                </TabsList>
 
-                {/* Project 2 */}
-                <div className="border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500 transition-colors">
-                  <div className="relative h-48 bg-gray-900">
-                    <Image src="/project2.png" alt="Fitness Tracker" fill className="object-cover opacity-80" />
-                  </div>
-                  <div className="p-4 sm:p-6">
-                    <div className="flex justify-between items-start mb-4">
-                      <h3 className="text-xl font-medium">Fitness Tracker</h3>
-                      <Link
-                        href="https://hekto-store.vercel.app/"
-                        target="_blank"
-                        className="text-gray-400 hover:text-white"
+                {/* HTML Tab */}
+                <TabsContent value="html">
+                  <div className="w-full md:w-5/6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                      <div
+                        data-aos="zoom-in-right"
+                        className="border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500 transition-colors"
                       >
-                        <ExternalLink className="w-5 h-5" />
-                      </Link>
-                    </div>
-                    <p className="text-gray-400 font-light mb-4">
-                      Mobile app for tracking workouts, nutrition, and fitness goals with data visualization.
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">React Native</span>
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Firebase</span>
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">D3.js</span>
-                    </div>
-                  </div>
-                </div>
+                        <div className="relative h-48 bg-gray-900">
+                          <Image src="/project1.png" alt="E-commerce App" fill className="object-cover opacity-80" />
+                        </div>
+                        <div className="p-4 sm:p-6">
+                          <div className="flex justify-between items-start mb-4">
+                            <h3 className="text-xl font-medium">Nike Clone Website</h3>
+                            <Link
+                              href="https://nike-clone-version.vercel.app"
+                              target="_blank"
+                              className="text-gray-400 hover:text-white"
+                            >
+                              <ExternalLink className="w-5 h-5" />
+                            </Link>
+                          </div>
+                          <p className="text-gray-400 font-light mb-4">
+                            A full-featured e-commerce platform built with React, Next.js, and Stripe integration.
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Next.js</span>
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Tailwind</span>
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">ShadCN</span>
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Supabase</span>
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Stripe</span>
+                          </div>
+                        </div>
+                      </div>
 
-                {/* Project 3 */}
-                <div className="border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500 transition-colors">
-                  <div className="relative h-48 bg-gray-900">
-                    <Image
-                      src="/project3.png"
-                      alt="Task Management Dashboard"
-                      fill
-                      className="object-cover opacity-80"
-                    />
-                  </div>
-                  <div className="p-4 sm:p-6">
-                    <div className="flex justify-between items-start mb-4">
-                      <h3 className="text-xl font-medium">Task Management Dashboard</h3>
-                      <Link
-                        href="https://marvix-blog.vercel.app/"
-                        target="_blank"
-                        className="text-gray-400 hover:text-white"
+                      <div
+                        data-aos="zoom-in-right"
+                        className="border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500 transition-colors"
                       >
-                        <ExternalLink className="w-5 h-5" />
-                      </Link>
-                    </div>
-                    <p className="text-gray-400 font-light mb-4">
-                      Collaborative task management platform with real-time updates and team features.
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">React</span>
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Socket.io</span>
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Node.js</span>
+                        <div className="relative h-48 bg-gray-900">
+                          <Image
+                            src="/project4.png"
+                            alt="AI Content Generator"
+                            fill
+                            className="object-cover opacity-80"
+                          />
+                        </div>
+                        <div className="p-4 sm:p-6">
+                          <div className="flex justify-between items-start mb-4">
+                            <h3 className="text-xl font-medium">AI Content Generator</h3>
+                            <Link
+                              href="https://clima-webapp-project.vercel.app/"
+                              target="_blank"
+                              className="text-gray-400 hover:text-white"
+                            >
+                              <ExternalLink className="w-5 h-5" />
+                            </Link>
+                          </div>
+                          <p className="text-gray-400 font-light mb-4">
+                            Web application that leverages AI to generate marketing content and social media posts.
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Next.js</span>
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">OpenAI API</span>
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">TypeScript</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </TabsContent>
 
-                {/* Project 4 */}
-                <div className="border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500 transition-colors">
-                  <div className="relative h-48 bg-gray-900">
-                    <Image src="/project4.png" alt="AI Content Generator" fill className="object-cover opacity-80" />
-                  </div>
-                  <div className="p-4 sm:p-6">
-                    <div className="flex justify-between items-start mb-4">
-                      <h3 className="text-xl font-medium">AI Content Generator</h3>
-                      <Link
-                        href="https://clima-webapp-project.vercel.app/"
-                        target="_blank"
-                        className="text-gray-400 hover:text-white"
+                {/* Next.js Tab */}
+                <TabsContent value="nextjs">
+                  <div className="w-full md:w-5/6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                      <div
+                        data-aos="zoom-in-right"
+                        className="border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500 transition-colors"
                       >
-                        <ExternalLink className="w-5 h-5" />
-                      </Link>
-                    </div>
-                    <p className="text-gray-400 font-light mb-4">
-                      Web application that leverages AI to generate marketing content and social media posts.
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Next.js</span>
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">OpenAI API</span>
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">TypeScript</span>
+                        <div className="relative h-48 bg-gray-900">
+                          <Image src="/project1.png" alt="E-commerce App" fill className="object-cover opacity-80" />
+                        </div>
+                        <div className="p-4 sm:p-6">
+                          <div className="flex justify-between items-start mb-4">
+                            <h3 className="text-xl font-medium">Nike Clone Website</h3>
+                            <Link
+                              href="https://nike-clone-version.vercel.app"
+                              target="_blank"
+                              className="text-gray-400 hover:text-white"
+                            >
+                              <ExternalLink className="w-5 h-5" />
+                            </Link>
+                          </div>
+                          <p className="text-gray-400 font-light mb-4">
+                            A full-featured e-commerce platform built with React, Next.js, and Stripe integration.
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Next.js</span>
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Tailwind</span>
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">ShadCN</span>
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Supabase</span>
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Stripe</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        data-aos="zoom-in-right"
+                        className="border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500 transition-colors"
+                      >
+                        <div className="relative h-48 bg-gray-900">
+                          <Image src="/project2.png" alt="Fitness Tracker" fill className="object-cover opacity-80" />
+                        </div>
+                        <div className="p-4 sm:p-6">
+                          <div className="flex justify-between items-start mb-4">
+                            <h3 className="text-xl font-medium">Hekto Ecommerce Website</h3>
+                            <Link
+                              href="https://hekto-store.vercel.app/"
+                              target="_blank"
+                              className="text-gray-400 hover:text-white"
+                            >
+                              <ExternalLink className="w-5 h-5" />
+                            </Link>
+                          </div>
+                          <p className="text-gray-400 font-light mb-4">
+                            Web-App for mobile to purchase online furtinure easily and real time update
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Nextjs</span>
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Shippo API</span>
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Sanity</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Project 3 */}
+                      <div
+                        data-aos="zoom-in-right"
+                        className="border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500 transition-colors"
+                      >
+                        <div className="relative h-48 bg-gray-900">
+                          <Image
+                            src="/project3.png"
+                            alt="Task Management Dashboard"
+                            fill
+                            className="object-cover opacity-80"
+                          />
+                        </div>
+                        <div className="p-4 sm:p-6">
+                          <div className="flex justify-between items-start mb-4">
+                            <h3 className="text-xl font-medium">Marvix - Blog Website</h3>
+                            <Link
+                              href="https://marvix-blog.vercel.app/"
+                              target="_blank"
+                              className="text-gray-400 hover:text-white"
+                            >
+                              <ExternalLink className="w-5 h-5" />
+                            </Link>
+                          </div>
+                          <p className="text-gray-400 font-light mb-4">
+                            Collaborative task management platform with real-time updates and team features.
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">React</span>
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Socket.io</span>
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Node.js</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </TabsContent>
+
+                {/* Python Tab */}
+                <TabsContent value="python">
+                  <div className="w-full md:w-5/6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                      <div
+                        data-aos="zoom-in-right"
+                        className="border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500 transition-colors"
+                      >
+                        <div className="relative h-48 bg-gray-900">
+                          <Image src="/project1.png" alt="E-commerce App" fill className="object-cover opacity-80" />
+                        </div>
+                        <div className="p-4 sm:p-6">
+                          <div className="flex justify-between items-start mb-4">
+                            <h3 className="text-xl font-medium">Nike Clone Website</h3>
+                            <Link
+                              href="https://nike-clone-version.vercel.app"
+                              target="_blank"
+                              className="text-gray-400 hover:text-white"
+                            >
+                              <ExternalLink className="w-5 h-5" />
+                            </Link>
+                          </div>
+                          <p className="text-gray-400 font-light mb-4">
+                            A full-featured e-commerce platform built with React, Next.js, and Stripe integration.
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Next.js</span>
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Tailwind</span>
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">ShadCN</span>
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Supabase</span>
+                            <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">Stripe</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </TabsContent>
+              </Tabs>
             </div>
           </div>
         </div>
@@ -640,12 +810,20 @@ export default function Home() {
                       </p>
                       <p>
                         Email:{" "}
-                        <a href="mailto:marjanahmed.dev@gmail.com" className="hover:text-purple-500 transition-colors">
+                        <a
+                          href="mailto:marjanahmed.dev@gmail.com"
+                          className="hover:text-purple-500 text-gray-300 text-sm bg-gray-700 p-0.5 px-2 rounded-sm transition-colors"
+                        >
                           marjanahmed.dev@gmail.com
                         </a>
                       </p>
-                      <p>Location: Karachi, PK</p>
-                      <p>Available for: Freelance, Full-time opportunities</p>
+                      <p>
+                        Location:{" "}
+                        <span className="text-sm bg-gray-700 p-0.5 px-2 text-gray-300 rounded-sm">Karachi, PK</span>
+                      </p>
+                      <p>
+                        Available for: <span className="text-sm">Freelance, Full-time opportunities</span>
+                      </p>
                     </div>
                   </div>
                   <div>
@@ -698,7 +876,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 text-center md:text-left">
-            <p className="text-gray-500 text-sm font-light">ahmed© 2024</p>
+            <p className="text-gray-500 text-sm font-light">ahmed© {currYear}</p>
           </div>
         </div>
       </footer>
