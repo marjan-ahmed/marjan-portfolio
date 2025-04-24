@@ -29,8 +29,8 @@ export default function Home() {
     <main className="min-h-screen bg-black text-white">
       <Navbar />
       <BackToTopButton />
-      <section className="h-py-12 sm:py-16 md:py-20">
-        <div className="container max-w-6xl px-4 mx-auto">
+      <section className="py-12 sm:py-16 md:py-24 border-b border-gray-800">
+      <div className="container max-w-6xl px-4 mx-auto">
           <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
             <div className="md:w-1/2 text-center md:text-left">
               <h1 className="text-4xl sm:text-5xl font-bold mb-6 md:mb-8 tracking-tight">Hi, I'm Marjan</h1>

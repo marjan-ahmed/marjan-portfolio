@@ -6,9 +6,9 @@ import Link from 'next/link';
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
-    <>
+    <>  
     {/* Navigation */}
-<nav className="flex justify-center items-center py-6">
+<nav className="flex justify-center items-center py-4">
 <div className="container max-w-6xl px-4 flex justify-between items-center">
   <Link href="/" className="text-white text-xl hover:text-purple-500 transition-colors">
     marjan <span className="text-3xl hover:text-bg-white  text-purple-600">.</span>

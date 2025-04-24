@@ -1,5 +1,6 @@
-import { Github, Link, Linkedin, Mail, Send } from 'lucide-react'
+import { Github, Linkedin, Mail, Send } from 'lucide-react'
 import React from 'react'
+import Link from 'next/link'
 
 function ContactSection() {
   return (
@@ -86,7 +87,7 @@ function ContactSection() {
                   </div>
                   <div>
                     <h3 className="text-xl font-medium mb-4">Connect</h3>
-                    <div className="flex space-x-4">
+                    <div className="flex space-x-2">
                       <Link
                         href="https://github.com/marjan-ahmed"
                         target="_blank"
