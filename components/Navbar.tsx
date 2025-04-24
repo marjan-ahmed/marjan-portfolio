@@ -17,17 +17,21 @@ function Navbar() {
   {/* Desktop Navigation */}
   <div className="hidden md:flex items-center space-x-8">
     <Link href="#education" className="hover:border-b-1 hover:ease-in hover:duration-200 hover:border-purple-500 text-gray-400 hover:text-purple-500 transition-colors">
-      education
+      Education
     </Link>
     <Link href="#experience" className="hover:border-b-1 hover:ease-in hover:duration-200 hover:border-purple-500 text-gray-400 hover:text-purple-500 transition-colors">
-      experience
+      Experience
     </Link>
     <Link href="#projects" className="hover:border-b-1 hover:ease-in hover:duration-200 hover:border-purple-500  text-gray-400 hover:text-purple-500 transition-colors">
-      projects
+      Projects
+    </Link>
+    <Link href="#testimonials" className="hover:border-b-1 hover:ease-in hover:duration-200 hover:border-purple-500 text-gray-400 hover:text-purple-500 transition-colors">
+      Testimonials
     </Link>
     <Link href="#contact" className="hover:border-b-1 hover:ease-in hover:duration-200 hover:border-purple-500 text-gray-400 hover:text-purple-500 transition-colors">
-      contact
+      Contact
     </Link>
+    
   </div>
 
   {/* Social Icons - Desktop */}
@@ -83,6 +87,13 @@ function Navbar() {
       onClick={() => setMobileMenuOpen(false)}
     >
       projects
+    </Link>
+    <Link
+      href="#testimonials"
+      className="text-gray-400 hover:text-purple-500 transition-colors"
+      onClick={() => setMobileMenuOpen(false)}
+    >
+      Testimonials
     </Link>
     <Link
       href="#contact"

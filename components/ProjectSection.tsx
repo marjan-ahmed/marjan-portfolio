@@ -299,7 +299,7 @@ function ProjectSection() {
                         className="border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500 transition-colors"
                       >
                         <div className="relative h-48 bg-gray-900">
-                          <Image src="/unit-converter.jpg" alt="Unit Convertor" fill className="object-cover opacity-80" />
+                          <Image src="/unit-converter.JPG" alt="Unit Convertor" fill className="object-cover opacity-80" />
                         </div>
                         <div className="p-4 sm:p-6">
                           <div className="flex justify-between items-start mb-4">
@@ -327,7 +327,7 @@ function ProjectSection() {
                         className="border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500 transition-colors"
                       >
                         <div className="relative h-48 bg-gray-900">
-                          <Image src="/password-checker.jpg" alt="Password Strength Meter" fill className="object-cover opacity-80" />
+                          <Image src="/password-checker.JPG" alt="Password Strength Meter" fill className="object-cover opacity-80" />
                         </div>
                         <div className="p-4 sm:p-6">
                           <div className="flex justify-between items-start mb-4">
@@ -355,7 +355,7 @@ function ProjectSection() {
                         className="border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500 transition-colors"
                       >
                         <div className="relative h-48 bg-gray-900">
-                          <Image src="/bmi.jpg" alt="BMI Calculator" fill className="object-cover opacity-80" />
+                          <Image src="/bmi.JPG" alt="BMI Calculator" fill className="object-cover opacity-80" />
                         </div>
                         <div className="p-4 sm:p-6">
                           <div className="flex justify-between items-start mb-4">
@@ -383,7 +383,7 @@ function ProjectSection() {
                         className="border border-gray-800 rounded-xl overflow-hidden hover:border-purple-500 transition-colors"
                       >
                         <div className="relative h-48 bg-gray-900">
-                          <Image src="/secure-data.jpg" alt="Secure Data Encryption" fill className="object-cover opacity-80" />
+                          <Image src="/secure-data.JPG" alt="Secure Data Encryption" fill className="object-cover opacity-80" />
                         </div>
                         <div className="p-4 sm:p-6">
                           <div className="flex justify-between items-start mb-4">
