@@ -26,7 +26,7 @@ export default function Home() {
   }, [])
 
   return (
-    <main id="hero" className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-black text-white">
       <Navbar />
       <BackToTopButton />
       <section className="h-py-12 sm:py-16 md:py-20">

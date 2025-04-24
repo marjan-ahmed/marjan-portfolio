@@ -7,12 +7,8 @@ const BackToTopButton = () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const heroSection = document.getElementById('hero');
-
     const handleScroll = () => {
-      if (!heroSection) return;
-      const heroBottom = heroSection.getBoundingClientRect().bottom;
-      setShow(heroBottom < 0); 
+      setShow(window.scrollY > 300);
     };
 
     window.addEventListener('scroll', handleScroll);
