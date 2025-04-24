@@ -12,6 +12,7 @@ import ProjectSection from "@/components/ProjectSection"
 import XP from "@/components/XP"
 import ContactSection from "@/components/ContactSection"
 import Edu from "@/components/Edu"
+import BackToTopButton from "@/components/BackToTop"
 
 export default function Home() {
   const data = new Date()
@@ -25,10 +26,10 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main id="hero" className="min-h-screen bg-black text-white">
       <Navbar />
-      
-      <section className="py-12 sm:py-16 md:py-20">
+      <BackToTopButton />
+      <section className="h-py-12 sm:py-16 md:py-20">
         <div className="container max-w-6xl px-4 mx-auto">
           <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
             <div className="md:w-1/2 text-center md:text-left">
