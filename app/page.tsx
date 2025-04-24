@@ -13,6 +13,7 @@ import XP from "@/components/XP"
 import ContactSection from "@/components/ContactSection"
 import Edu from "@/components/Edu"
 import BackToTopButton from "@/components/BackToTop"
+import Testimonial from "@/components/Testimonial"
 
 export default function Home() {
   const data = new Date()
@@ -93,6 +94,7 @@ export default function Home() {
 
       <SkillSection />
       <ProjectSection />
+      <Testimonial />
       <ContactSection />
 
       {/* Footer */}
