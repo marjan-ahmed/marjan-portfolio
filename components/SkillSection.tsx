@@ -16,7 +16,7 @@ function SkillSection() {
             that I've been using
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
             {/* Publications */}
             <div data-aos="fade-up" className="border-1 border-gray-800 p-4 rounded-2xl mb-8 sm:mb-0">
               <h3 className="text-sm text-gray-400 mb-4 font-light">Publications in both stores</h3>
