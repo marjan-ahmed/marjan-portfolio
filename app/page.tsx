@@ -3,10 +3,8 @@
 import { useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Github, Linkedin, Mail } from "lucide-react"
 import AOS from "aos"
 import "aos/dist/aos.css"
-import Navbar from "@/components/Navbar"
 import SkillSection from "@/components/SkillSection"
 import ProjectSection from "@/components/ProjectSection"
 import XP from "@/components/XP"
@@ -14,11 +12,9 @@ import ContactSection from "@/components/ContactSection"
 import Edu from "@/components/Edu"
 import BackToTopButton from "@/components/BackToTop"
 import Testimonial from "@/components/Testimonial"
-import { ModeToggle } from "@/components/ModeToggle"
+import Footer from "@/components/Footer"
 
 export default function Home() {
-  const data = new Date()
-  const currYear = data.getFullYear()
 
   useEffect(() => {
     AOS.init({
@@ -29,7 +25,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white text-black dark:bg-black dark:text-white transition-colors duration-300">
-      <Navbar />
       <BackToTopButton />
 
       {/* Hero Section */}
@@ -93,28 +88,6 @@ export default function Home() {
       <Testimonial />
       <ContactSection />
 
-      {/* Footer */}
-      <footer className="py-12 sm:py-16 border-t border-gray-300 dark:border-gray-800">
-        <div className="container max-w-6xl px-4 mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-600 dark:text-gray-400 mb-4 md:mb-0 font-light">Follow me</p>
-            <div className="flex items-center space-x-4">
-              <Link href="https://github.com/marjan-ahmed" target="_blank" aria-label="GitHub">
-                <Github className="w-5 h-5 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" />
-              </Link>
-              <Link href="https://linkedin.com/in/hafizmarjanahmed" target="_blank" aria-label="LinkedIn">
-                <Linkedin className="w-5 h-5 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" />
-              </Link>
-              <Link href="mailto:marjanahmed.dev@gmail.com" aria-label="Email">
-                <Mail className="w-5 h-5 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors" />
-              </Link>
-            </div>
-          </div>
-          <div className="mt-8 text-center md:text-left">
-            <p className="text-gray-500 dark:text-gray-600 text-sm font-light">ahmed© {currYear}</p>
-          </div>
-        </div>
-      </footer>
     </main>
   )
 }

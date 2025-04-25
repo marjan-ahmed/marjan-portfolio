@@ -51,7 +51,7 @@ function ProjectSection() {
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 font-light mb-4">
+                          <p className="text-gray-400 mb-4">
                             A Hackathon project that provides information about the climate.
                           </p>
                           <div className="flex flex-wrap gap-2">
@@ -80,7 +80,7 @@ function ProjectSection() {
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 font-light mb-4">
+                          <p className="text-gray-400 mb-4">
                             It is my favourite game which I created the same website clone of it
                           </p>
                           <div className="flex flex-wrap gap-2">
@@ -109,7 +109,7 @@ function ProjectSection() {
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 font-light mb-4">
+                          <p className="text-gray-400 mb-4">
                             A simple web application that generates random jokes using the JokeAPI.
                           </p>
                           <div className="flex flex-wrap gap-2">
@@ -139,7 +139,7 @@ function ProjectSection() {
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 font-light mb-4">
+                          <p className="text-gray-400 mb-4">
                             A web application that allows users to create and download their resumes in PDF format.
                           </p>
                           <div className="flex flex-wrap gap-2">
@@ -176,7 +176,7 @@ function ProjectSection() {
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 font-light mb-4">
+                          <p className="text-gray-400 mb-4">
                             A full-featured e-commerce platform built with React, Next.js, and Stripe integration.
                           </p>
                           <div className="flex flex-wrap gap-2">
@@ -207,7 +207,7 @@ function ProjectSection() {
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 font-light mb-4">
+                          <p className="text-gray-400 mb-4">
                             Web-App for mobile to purchase online furtinure easily and real time update
                           </p>
                           <div className="flex flex-wrap gap-2">
@@ -242,7 +242,7 @@ function ProjectSection() {
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 font-light mb-4">
+                          <p className="text-gray-400 mb-4">
                             Collaborative task management platform with real-time updates and team features.
                           </p>
                           <div className="flex flex-wrap gap-2">
@@ -276,7 +276,7 @@ function ProjectSection() {
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 font-light mb-4">
+                          <p className="text-gray-400 mb-4">
                             A clone of the official website of the Governor of Sindh, Pakistan.
                           </p>
                           <div className="flex flex-wrap gap-2">
@@ -312,7 +312,7 @@ function ProjectSection() {
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 font-light mb-4">
+                          <p className="text-gray-400 mb-4">
                             A basic unit converter web application.
                           </p>
                           <div className="flex flex-wrap gap-2">
@@ -340,7 +340,7 @@ function ProjectSection() {
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 font-light mb-4">
+                          <p className="text-gray-400 mb-4">
                             A web application that checks the strength of a password.
                           </p>
                           <div className="flex flex-wrap gap-2">
@@ -368,7 +368,7 @@ function ProjectSection() {
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 font-light mb-4">
+                          <p className="text-gray-400 mb-4">
                             A web application that calculates the Body Mass Index (BMI) based on user input.
                           </p>
                           <div className="flex flex-wrap gap-2">
@@ -396,7 +396,7 @@ function ProjectSection() {
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 font-light mb-4">
+                          <p className="text-gray-400 mb-4">
                             A web application that encrypts and decrypts data using a secure algorithm.
                           </p>
                           <div className="flex flex-wrap gap-2">

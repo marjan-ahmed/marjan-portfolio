@@ -1,8 +1,31 @@
+'use client'
 import { Github, Linkedin, Mail, Send } from 'lucide-react'
-import React from 'react'
 import Link from 'next/link'
+import React, { useRef, useState } from 'react'
+
 
 function ContactSection() {
+  const formRef = useRef<HTMLFormElement>(null)
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    const formData = new FormData(formRef.current!)
+    const response = await fetch('https://formspree.io/f/xjkwkvqn', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        Accept: 'application/json',
+      },
+    })
+
+    if (response.ok) {
+      setSubmitted(true)
+      // 👇 Redirect after successful submission
+      window.location.href = '/thank-you' // or any page you want
+    }
+  }
   return (
     <div>
       {/* Contact Section */}
@@ -15,39 +38,49 @@ function ContactSection() {
             </div>
             <div className="md:w-3/4">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div>
-                  <form className="space-y-6">
+              <div>
+                  <form
+                    ref={formRef}
+                    onSubmit={handleSubmit}
+                    className="space-y-6"
+                  >
                     <div>
-                      <label htmlFor="name" className="block text-sm font-light text-gray-400 dark:text-gray-300 mb-2">
+                      <label htmlFor="name" className="block text-sm font-light text-gray-900 dark:text-gray-300 mb-2">
                         Name
                       </label>
                       <input
                         type="text"
+                        name="name"
                         id="name"
-                        className="w-full bg-transparent border border-gray-800 dark:border-gray-600 rounded-lg px-4 py-3 text-white dark:text-gray-900 focus:outline-none focus:border-purple-500"
+                        className="w-full bg-transparent border border-gray-800 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-800 dark:text-white focus:outline-none focus:border-purple-500"
                         placeholder="Your name"
+                        required
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-light text-gray-400 dark:text-gray-300 mb-2">
+                      <label htmlFor="email" className="block text-sm font-light text-gray-900 dark:text-gray-300 mb-2">
                         Email
                       </label>
                       <input
                         type="email"
+                        name="email"
                         id="email"
-                        className="w-full bg-transparent border border-gray-800 dark:border-gray-600 rounded-lg px-4 py-3 text-white dark:text-gray-900 focus:outline-none focus:border-purple-500"
+                        className="w-full bg-transparent border border-gray-800 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-800 dark:text-white focus:outline-none focus:border-purple-500"
                         placeholder="your@email.com"
+                        required
                       />
                     </div>
                     <div>
-                      <label htmlFor="message" className="block text-sm font-light text-gray-400 dark:text-gray-300 mb-2">
+                      <label htmlFor="message" className="block text-sm font-light text-gray-900 dark:text-gray-300 mb-2">
                         Message
                       </label>
                       <textarea
+                        name="message"
                         id="message"
                         rows={5}
-                        className="w-full bg-transparent border border-gray-800 dark:border-gray-600 rounded-lg px-4 py-3 text-white dark:text-gray-900 focus:outline-none focus:border-purple-500"
+                        className="w-full bg-transparent border border-gray-800 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-800 dark:text-white focus:outline-none focus:border-purple-500"
                         placeholder="Your message"
+                        required
                       ></textarea>
                     </div>
                     <button
