@@ -7,8 +7,8 @@ import { IoLogoJavascript } from "react-icons/io"
 function SkillSection() {
   return (
     <>
-    {/* Skills Section */}
-    <section className="py-12 sm:py-16 md:py-20">
+      {/* Skills Section */}
+      <section className="py-12 sm:py-16 md:py-20">
         <div className="container max-w-6xl px-4 mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold mb-10 sm:mb-16 tracking-tight text-center md:text-left">
             These are the technologies
@@ -19,7 +19,7 @@ function SkillSection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
             {/* Publications */}
             <div data-aos="fade-up" className="border-1 border-gray-800 p-4 rounded-2xl mb-8 sm:mb-0">
-              <h3 className="text-sm text-gray-400 mb-4 font-light">Publications in both stores</h3>
+              <h3 className="text-sm text-gray-500 mb-4 font-normal">Publications in both stores</h3>
               <div className="space-y-3">
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 flex items-center justify-center">
@@ -62,11 +62,11 @@ function SkillSection() {
 
             {/* Front-end Engineer Design */}
             <div data-aos="fade-up" className="border-1 border-gray-800 p-4 rounded-2xl mb-8 sm:mb-0">
-              <h3 className="text-sm text-gray-400 mb-4 font-light">Front-end Engineer Design</h3>
+              <h3 className="text-sm text-gray-500 mb-4 font-normal">Front-end Engineer Design</h3>
               <div className="space-y-3">
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-[#61dafb] rounded-full flex items-center justify-center">
-                    <span className="text-s text-black">
+                    <span className="text-black">
                       <FaReact />
                     </span>
                   </div>
@@ -74,14 +74,14 @@ function SkillSection() {
                 </div>
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-[#61dafb] rounded-full flex items-center justify-center">
-                    <span className="text-s text-black">
+                    <span className="text-black">
                       <TbBrandReactNative />
                     </span>
                   </div>
                   <span className="text-sm">React Native</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-6 h-6 mr-2 bg-black rounded-full flex items-center justify-center border border-white/20">
+                  <div className="w-6 h-6 mr-2 dark:bg-white bg-black rounded-full flex items-center justify-center border border-white/20">
                     <span className="text-s">
                       <TbBrandNextjs />
                     </span>
@@ -90,15 +90,15 @@ function SkillSection() {
                 </div>
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-purple-600 rounded-full flex items-center justify-center">
-                    <span className="text-s">
+                    <span className="text-white">
                       <SiVite />
                     </span>
                   </div>
                   <span className="text-sm">Vite</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-6 h-6 mr-2 bg-black rounded-full flex items-center justify-center border border-white/20">
-                    <span className="text-s">
+                  <div className="w-6 h-6 mr-2 dark:bg-white bg-black rounded-full flex items-center justify-center border border-white/20">
+                    <span className="text-white">
                       <FaFigma />
                     </span>
                   </div>
@@ -106,7 +106,7 @@ function SkillSection() {
                 </div>
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-red-500 rounded-full flex items-center justify-center">
-                    <span className="text-xs">
+                    <span className="text-white">
                       <FaReact />
                     </span>
                   </div>
@@ -117,11 +117,11 @@ function SkillSection() {
 
             {/* Languages */}
             <div data-aos="fade-up" className="border-1 border-gray-800 p-4 rounded-2xl mb-8 sm:mb-0">
-              <h3 className="text-sm text-gray-400 mb-4 font-light">Languages</h3>
+              <h3 className="text-sm text-gray-500 mb-4 font-normal">Languages</h3>
               <div className="space-y-3">
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-yellow-400 rounded-full flex items-center justify-center">
-                    <span className="text-s text-black">
+                    <span className="text-black">
                       <IoLogoJavascript />
                     </span>
                   </div>
@@ -129,7 +129,7 @@ function SkillSection() {
                 </div>
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-blue-500 rounded-full flex items-center justify-center">
-                    <span className="text-xs">TS</span>
+                    <span className="text-white">TS</span>
                   </div>
                   <span className="text-sm">TypeScript</span>
                 </div>
@@ -138,7 +138,7 @@ function SkillSection() {
 
             {/* DevOps */}
             <div data-aos="fade-up" className="mb-8 sm:mb-0 border-1 border-gray-800 p-4 rounded-2xl">
-              <h3 className="text-sm text-gray-400 mb-4 font-light">DevOps</h3>
+              <h3 className="text-sm text-gray-500 mb-4 font-normal">DevOps</h3>
               <div className="space-y-3">
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-gray-800 rounded-full flex items-center justify-center border border-white/20">
@@ -159,7 +159,7 @@ function SkillSection() {
                 </div>
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-s">
+                    <span className="text-white">
                       <SiNginx />
                     </span>
                   </div>
@@ -167,7 +167,7 @@ function SkillSection() {
                 </div>
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-blue-600 rounded-full flex items-center justify-center">
-                    <span className="text-s">
+                    <span className="text-white">
                       <FaDocker />
                     </span>
                   </div>
@@ -178,11 +178,11 @@ function SkillSection() {
 
             {/* Back-end */}
             <div data-aos="fade-up" className="border-1 border-gray-800 p-4 rounded-2xl">
-              <h3 className="text-sm text-gray-400 mb-4 font-light">Back-end</h3>
+              <h3 className="text-sm text-gray-500 mb-4 font-normal">Back-end</h3>
               <div className="space-y-3">
                 <div className="flex items-center">
-                  <div className="w-6 h-6 mr-2 bg-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-s">
+                  <div className="w-6 h-6 mr-2 bg-green-500 rounded-full flex items-center justify-center">
+                    <span className="text-white">
                       <FaNode />
                     </span>
                   </div>
@@ -190,7 +190,7 @@ function SkillSection() {
                 </div>
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-purple-700 rounded-full flex items-center justify-center">
-                    <span className="text-s">
+                    <span className="text-white">
                       <SiPrisma />
                     </span>
                   </div>
