@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <>
       {/* Navigation */}
-      <nav className="flex justify-center items-center py-3">
+      <nav className="flex bg-black justify-center items-center py-3">
         <div className="container max-w-6xl px-4 flex justify-between items-center">
           <Link
             href="/"
