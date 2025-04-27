@@ -85,7 +85,7 @@ function ContactSection() {
                     </div>
                     <button
                       type="submit"
-                      className="bg-purple-600 text-white px-6 py-3 rounded-lg flex items-center justify-center hover:opacity-90 transition-opacity w-full sm:w-auto"
+                      className="bg-purple-600 cursor-pointer text-white px-6 py-3 rounded-lg flex items-center justify-center hover:opacity-90 transition-opacity w-full sm:w-auto"
                     >
                       Send Message
                       <Send className="w-4 h-4 ml-2" />
