@@ -1,10 +1,5 @@
-"use client"
-
-import { useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import AOS from "aos"
-import "aos/dist/aos.css"
 import SkillSection from "@/components/SkillSection"
 import ProjectSection from "@/components/ProjectSection"
 import XP from "@/components/XP"
@@ -12,16 +7,8 @@ import ContactSection from "@/components/ContactSection"
 import Edu from "@/components/Edu"
 import BackToTopButton from "@/components/BackToTop"
 import Testimonial from "@/components/Testimonial"
-import Footer from "@/components/Footer"
 
 export default function Home() {
-
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-    })
-  }, [])
 
   return (
     <main className="min-h-screen bg-white text-black dark:bg-black dark:text-white transition-colors duration-300">
@@ -74,7 +61,6 @@ export default function Home() {
           {["Javascript", "React", "Coffee"].map((tech) => (
             <h2
               key={tech}
-              data-aos="fade-down"
               className="text-4xl sm:text-5xl bg-gradient-to-r from-purple-500 to-purple-300 dark:from-purple-400 dark:to-purple-200 bg-clip-text text-transparent font-bold mb-6 sm:mb-8 tracking-tight"
             >
               {tech}

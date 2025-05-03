@@ -16,8 +16,6 @@ function XP() {
             </div>
             <div className="md:w-3/4 grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               <div
-                data-aos="fade-up"
-                data-aos-anchor-placement="top-bottom"
                 className="bg-[#d8d5a2] rounded-3xl p-6 flex flex-col justify-between h-40"
               >
                 <div className="bg-[#b3ad64] text-black w-10 h-10 rounded-lg flex items-center justify-center font-bold">
@@ -26,8 +24,6 @@ function XP() {
                 <div className="text-black font-medium">JavaScript</div>
               </div>
               <div
-                data-aos="fade-up"
-                data-aos-anchor-placement="top-bottom"
                 className="bg-[#83a5b8] rounded-3xl p-6 flex flex-col justify-between h-40"
               >
                 <div className="text-[#61dafb]">
@@ -48,8 +44,6 @@ function XP() {
                 <div className="text-black font-medium">React</div>
               </div>
               <div
-                data-aos="fade-up"
-                data-aos-anchor-placement="top-bottom"
                 className="bg-[#d3d3d3] rounded-3xl p-6 flex flex-col justify-between h-40"
               >
                 <div className="bg-black text-white w-10 h-10 rounded-lg flex items-center justify-center font-bold">

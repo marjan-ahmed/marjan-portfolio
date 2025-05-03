@@ -8,7 +8,7 @@ function Edu() {
         <div className="container max-w-6xl px-4 mx-auto">
           <div className="flex flex-col md:flex-row items-start">
             <div className="md:w-1/4 mb-8 md:mb-0 text-center md:text-left">
-              <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter" data-aos="zoom-in-down">
+              <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter">
                 EDU
               </h2>
               <p className="text-gray-500 dark:text-gray-400 mt-2 ">My academic journey</p>
@@ -16,7 +16,7 @@ function Edu() {
             <div className="md:w-3/4">
               <div className="grid gap-6 sm:gap-8">
                 {/* Matriculation */}
-                <div data-aos="fade-right" className="border border-gray-300 dark:border-gray-800 rounded-xl p-4 sm:p-6 hover:border-purple-500 transition-colors">
+                <div className="border border-gray-300 dark:border-gray-800 rounded-xl p-4 sm:p-6 hover:border-purple-500 transition-colors">
                   <div className="flex flex-col sm:flex-row justify-between items-start">
                     <div>
                       <h3 className="text-xl font-medium mb-1">Matriculation</h3>
@@ -30,7 +30,7 @@ function Edu() {
                 </div>
 
                 {/* WordPress Development Certification */}
-                <div data-aos="fade-right" className="border border-gray-300 dark:border-gray-800 rounded-xl p-4 sm:p-6 hover:border-purple-500 transition-colors">
+                <div className="border border-gray-300 dark:border-gray-800 rounded-xl p-4 sm:p-6 hover:border-purple-500 transition-colors">
                   <div className="flex flex-col sm:flex-row justify-between items-start">
                     <div>
                       <h3 className="text-xl font-medium mb-1">WordPress Development Certification</h3>
@@ -44,7 +44,7 @@ function Edu() {
                 </div>
 
                 {/* Agentic AI Developer */}
-                <div data-aos="fade-right" className="border border-gray-300 dark:border-gray-800 rounded-xl p-4 sm:p-6 hover:border-purple-500 transition-colors">
+                <div className="border border-gray-300 dark:border-gray-800 rounded-xl p-4 sm:p-6 hover:border-purple-500 transition-colors">
                   <div className="flex flex-col sm:flex-row justify-between items-start">
                     <div>
                       <h3 className="text-xl font-medium mb-1">Agentic AI Developer</h3>

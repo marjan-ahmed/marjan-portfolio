@@ -1,8 +1,8 @@
-import React from 'react'
-import { FaDocker, FaFigma, FaNode, FaReact } from "react-icons/fa"
-import { TbBrandNextjs, TbBrandReactNative } from "react-icons/tb"
-import { SiNginx, SiPrisma, SiVite } from "react-icons/si"
-import { IoLogoJavascript } from "react-icons/io"
+import React from "react";
+import { FaDocker, FaFigma, FaNode, FaReact } from "react-icons/fa";
+import { TbBrandNextjs, TbBrandReactNative } from "react-icons/tb";
+import { SiNginx, SiPrisma, SiVite } from "react-icons/si";
+import { IoLogoJavascript } from "react-icons/io";
 
 function SkillSection() {
   return (
@@ -18,8 +18,10 @@ function SkillSection() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
             {/* Publications */}
-            <div data-aos="fade-up" className="border-1 border-gray-800 p-4 rounded-2xl mb-8 sm:mb-0">
-              <h3 className="text-sm text-gray-500 mb-4 font-normal">Publications in both stores</h3>
+            <div className="border-1 border-gray-800 p-4 rounded-2xl mb-8 sm:mb-0">
+              <h3 className="text-sm text-gray-500 mb-4 font-normal">
+                Publications in both stores
+              </h3>
               <div className="space-y-3">
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 flex items-center justify-center">
@@ -61,8 +63,10 @@ function SkillSection() {
             </div>
 
             {/* Front-end Engineer Design */}
-            <div data-aos="fade-up" className="border-1 border-gray-800 p-4 rounded-2xl mb-8 sm:mb-0">
-              <h3 className="text-sm text-gray-500 mb-4 font-normal">Front-end Engineer Design</h3>
+            <div className="border-1 border-gray-800 p-4 rounded-2xl mb-8 sm:mb-0">
+              <h3 className="text-sm text-gray-500 mb-4 font-normal">
+                Front-end Engineer Design
+              </h3>
               <div className="space-y-3">
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-[#61dafb] rounded-full flex items-center justify-center">
@@ -116,8 +120,10 @@ function SkillSection() {
             </div>
 
             {/* Languages */}
-            <div data-aos="fade-up" className="border-1 border-gray-800 p-4 rounded-2xl mb-8 sm:mb-0">
-              <h3 className="text-sm text-gray-500 mb-4 font-normal">Languages</h3>
+            <div className="border-1 border-gray-800 p-4 rounded-2xl mb-8 sm:mb-0">
+              <h3 className="text-sm text-gray-500 mb-4 font-normal">
+                Languages
+              </h3>
               <div className="space-y-3">
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-yellow-400 rounded-full flex items-center justify-center">
@@ -137,7 +143,7 @@ function SkillSection() {
             </div>
 
             {/* DevOps */}
-            <div data-aos="fade-up" className="mb-8 sm:mb-0 border-1 border-gray-800 p-4 rounded-2xl">
+            <div className="mb-8 sm:mb-0 border-1 border-gray-800 p-4 rounded-2xl">
               <h3 className="text-sm text-gray-500 mb-4 font-normal">DevOps</h3>
               <div className="space-y-3">
                 <div className="flex items-center">
@@ -177,8 +183,10 @@ function SkillSection() {
             </div>
 
             {/* Back-end */}
-            <div data-aos="fade-up" className="border-1 border-gray-800 p-4 rounded-2xl">
-              <h3 className="text-sm text-gray-500 mb-4 font-normal">Back-end</h3>
+            <div className="border-1 border-gray-800 p-4 rounded-2xl">
+              <h3 className="text-sm text-gray-500 mb-4 font-normal">
+                Back-end
+              </h3>
               <div className="space-y-3">
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-green-500 rounded-full flex items-center justify-center">
@@ -202,7 +210,7 @@ function SkillSection() {
         </div>
       </section>
     </>
-  )
+  );
 }
 
 export default SkillSection;
