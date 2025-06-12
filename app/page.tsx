@@ -29,7 +29,7 @@ export default function Home() {
               </p>
               <div className="mt-8 md:mt-10 flex items-center justify-center md:justify-start space-x-6">
                 <a
-                  href="/Marjan Resume.pdf"
+                  href="/Marjan Ahmed Resume.pdf"
                   download
                   className="bg-transparent hover:bg-black/10 dark:hover:bg-white/10 text-black dark:text-white px-5 sm:px-6 py-2 rounded-full border border-black/20 dark:border-white/20 transition-colors"
                 >
