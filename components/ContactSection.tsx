@@ -136,7 +136,7 @@ function ContactSection() {
                         <Linkedin className="w-5 h-5 text-white" />
                       </Link>
                       <Link
-                        href="mailto:example@example.com"
+                        href="mailto:marjanahmed.dev@gmail.com"
                         className="bg-gray-800 p-3 rounded-full hover:bg-gray-700 transition-colors"
                       >
                         <Mail className="w-5 h-5 text-white" />
