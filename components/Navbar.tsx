@@ -16,7 +16,7 @@ function Navbar() {
             href="/"
             className="text-gray-700 text-xl font-semibold hover:text-purple-500 transition-colors dark:text-gray-200 dark:hover:text-purple-500"
           >
-            marjan
+            marjan-ahmed
             <span className="text-3xl text-purple-600 dark:text-purple-500">.</span>
           </Link>
 

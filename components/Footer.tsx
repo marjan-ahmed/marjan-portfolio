@@ -24,7 +24,7 @@ function Footer() {
             </div>
           </div>
           <div className="mt-8 text-center md:text-left">
-            <p className="text-gray-500 dark:text-gray-600 text-sm font-light">ahmed© {currYear}</p>
+            <p className="text-gray-500 dark:text-gray-400 text-sm">marjan-ahmed© {currYear}</p>
           </div>
         </div>
       </footer>

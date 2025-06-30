@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 
 function XP() {
@@ -8,49 +9,52 @@ function XP() {
         <div className="container max-w-6xl px-4 mx-auto">
           <div className="flex flex-col md:flex-row items-start">
             <div className="md:w-1/4 mb-8 md:mb-0 text-center md:text-left">
-              <p className="text-gray-400 font-light">4 years of</p>
+              <p className="text-gray-500 dark:text-gray-400">2 years of</p>
               <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter" data-aos="zoom-in-down">
                 XP
               </h2>
-              <p className="text-gray-400 mt-2 font-light">with the most popular ecosystem around</p>
+              <p className="text-gray-500 dark:text-gray-400">with the most popular ecosystem around</p>
             </div>
-            <div className="md:w-3/4 grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              <div
-                className="bg-[#d8d5a2] rounded-3xl p-6 flex flex-col justify-between h-40"
-              >
-                <div className="bg-[#b3ad64] text-black w-10 h-10 rounded-lg flex items-center justify-center font-bold">
-                  JS
-                </div>
-                <div className="text-black font-medium">JavaScript</div>
-              </div>
-              <div
-                className="bg-[#83a5b8] rounded-3xl p-6 flex flex-col justify-between h-40"
-              >
-                <div className="text-[#61dafb]">
-                  <svg
-                    viewBox="0 0 24 24"
-                    width="32"
-                    height="32"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <circle cx="12" cy="12" r="3"></circle>
-                  </svg>
-                </div>
-                <div className="text-black font-medium">React</div>
-              </div>
-              <div
-                className="bg-[#d3d3d3] rounded-3xl p-6 flex flex-col justify-between h-40"
-              >
-                <div className="bg-black text-white w-10 h-10 rounded-lg flex items-center justify-center font-bold">
-                  N
-                </div>
-                <div className="text-black font-medium">Next.JS</div>
-              </div>
+           <div className="md:w-3/4 grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {/* TypeScript */}
+      <div className="bg-[#6cb6e7] rounded-3xl p-6 flex flex-col justify-between h-40">
+        <div className="w-10 h-10 rounded-lg flex items-center justify-center">
+          <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+            alt="TypeScript"
+            width={35}
+            height={35}
+          />
+        </div>
+        <div className="text-black font-medium">TypeScript</div>
+      </div>
+
+      {/* React */}
+      <div className="bg-[#cceefa] rounded-3xl p-6 flex flex-col justify-between h-40">
+        <div className="w-10 h-10 rounded-lg flex items-center justify-center">
+          <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+            alt="React"
+            width={35}
+            height={35}
+          />
+        </div>
+        <div className="text-black font-medium">React</div>
+      </div>
+
+      {/* Next.js */}
+       <div className="bg-gray-300 rounded-3xl p-6 flex flex-col justify-between h-40">
+        <div className="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden">
+          <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+            alt="Next.js"
+            width={35}
+            height={35}
+          />
+        </div>
+        <div className="text-black font-medium">Next.JS</div>
+        </div>
+    
             </div>
           </div>
           <div className="hidden md:flexjustify-center mt-8">

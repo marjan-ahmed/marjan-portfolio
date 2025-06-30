@@ -1,8 +1,10 @@
 import React from "react";
 import { FaDocker, FaFigma, FaNode, FaReact } from "react-icons/fa";
 import { TbBrandNextjs, TbBrandReactNative } from "react-icons/tb";
-import { SiNginx, SiPrisma, SiVite } from "react-icons/si";
+import { SiFirebase, SiNginx, SiPrisma, SiSupabase, SiVite } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io";
+import { DiFirebase } from "react-icons/di";
+import { RiFirebaseFill, RiFirebaseLine } from "react-icons/ri";
 
 function SkillSection() {
   return (
@@ -18,49 +20,6 @@ function SkillSection() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
             {/* Publications */}
-            <div className="border-1 border-gray-800 p-4 rounded-2xl mb-8 sm:mb-0">
-              <h3 className="text-sm text-gray-500 mb-4 font-normal">
-                Publications in both stores
-              </h3>
-              <div className="space-y-3">
-                <div className="flex items-center">
-                  <div className="w-6 h-6 mr-2 flex items-center justify-center">
-                    <svg
-                      viewBox="0 0 24 24"
-                      width="16"
-                      height="16"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                      <path d="M2 17l10 5 10-5"></path>
-                      <path d="M2 12l10 5 10-5"></path>
-                    </svg>
-                  </div>
-                  <span className="text-sm">App Store</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-6 h-6 mr-2 flex items-center justify-center">
-                    <svg
-                      viewBox="0 0 24 24"
-                      width="16"
-                      height="16"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                    </svg>
-                  </div>
-                  <span className="text-sm">Play Store</span>
-                </div>
-              </div>
-            </div>
 
             {/* Front-end Engineer Design */}
             <div className="border-1 border-gray-800 p-4 rounded-2xl mb-8 sm:mb-0">
@@ -144,37 +103,18 @@ function SkillSection() {
 
             {/* DevOps */}
             <div className="mb-8 sm:mb-0 border-1 border-gray-800 p-4 rounded-2xl">
-              <h3 className="text-sm text-gray-500 mb-4 font-normal">DevOps</h3>
+              <h3 className="text-sm text-gray-500 mb-4 font-normal">Database</h3>
               <div className="space-y-3">
                 <div className="flex items-center">
-                  <div className="w-6 h-6 mr-2 bg-gray-800 rounded-full flex items-center justify-center border border-white/20">
-                    <svg
-                      viewBox="0 0 24 24"
-                      width="14"
-                      height="14"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
+                  <div className="w-6 h-6 mr-2 bg-[#DD2C00] rounded-full flex items-center justify-center border border-white/20">
+                   <SiFirebase color="white" />
                   </div>
-                  <span className="text-sm">GitHub Actions</span>
+                  <span className="text-sm">Firebase</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-6 h-6 mr-2 bg-green-600 rounded-full flex items-center justify-center">
                     <span className="text-white">
-                      <SiNginx />
-                    </span>
-                  </div>
-                  <span className="text-sm">Nginx</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-6 h-6 mr-2 bg-blue-600 rounded-full flex items-center justify-center">
-                    <span className="text-white">
-                      <FaDocker />
+                      <SiSupabase />
                     </span>
                   </div>
                   <span className="text-sm">Docker</span>

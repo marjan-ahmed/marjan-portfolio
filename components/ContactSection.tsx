@@ -95,7 +95,7 @@ function ContactSection() {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-xl font-medium mb-4 text-gray-900 dark:text-gray-100">Contact Information</h3>
-                    <div className="space-y-3 text-gray-400 dark:text-gray-400 font-light">
+                    <div className="space-y-3 text-gray-500 dark:text-gray-400">
                       <p>
                         Feel free to reach out if you're looking for a developer, have a question, or just want to
                         connect.

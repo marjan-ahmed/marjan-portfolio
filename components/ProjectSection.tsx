@@ -18,7 +18,7 @@ function ProjectSection() {
               <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter">
                 PRO
               </h2>
-              <p className="text-gray-400 mt-2 font-light">
+              <p className="text-gray-500 dark:text-gray-500 dark:text-gray-400 mt-2">
                 Selected projects I've worked on
               </p>
             </div>
@@ -51,12 +51,12 @@ function ProjectSection() {
                             <Link
                               href="https://clima-webapp-project.vercel.app/"
                               target="_blank"
-                              className="text-gray-400 hover:text-white"
+                              className="text-gray-500 dark:text-gray-400 hover:text-white"
                             >
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 mb-4">
+                          <p className="text-gray-500 dark:text-gray-500 dark:text-gray-400 mb-4">
                             A Hackathon project that provides information about
                             the climate.
                           </p>
@@ -91,12 +91,12 @@ function ProjectSection() {
                             <Link
                               href="https://asphaltlegends.vercel.app/"
                               target="_blank"
-                              className="text-gray-400 hover:text-white"
+                              className="text-gray-500 dark:text-gray-400 hover:text-white"
                             >
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 mb-4">
+                          <p className="text-gray-500 dark:text-gray-500 dark:text-gray-400 mb-4">
                             It is my favourite game which I created the same
                             website clone of it
                           </p>
@@ -129,12 +129,12 @@ function ProjectSection() {
                             <Link
                               href="https://joke-engine.vercel.app/"
                               target="_blank"
-                              className="text-gray-400 hover:text-white"
+                              className="text-gray-500 dark:text-gray-400 hover:text-white"
                             >
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 mb-4">
+                          <p className="text-gray-500 dark:text-gray-400 mb-4">
                             A simple web application that generates random jokes
                             using the JokeAPI.
                           </p>
@@ -172,12 +172,12 @@ function ProjectSection() {
                             <Link
                               href="https://dynamic-resume-builder-six-lake.vercel.app/"
                               target="_blank"
-                              className="text-gray-400 hover:text-white"
+                              className="text-gray-500 dark:text-gray-400 hover:text-white"
                             >
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 mb-4">
+                          <p className="text-gray-500 dark:text-gray-400 mb-4">
                             A web application that allows users to create and
                             download their resumes in PDF format.
                           </p>
@@ -219,12 +219,12 @@ function ProjectSection() {
                             <Link
                               href="https://nike-clone-version.vercel.app"
                               target="_blank"
-                              className="text-gray-400 hover:text-white"
+                              className="text-gray-500 dark:text-gray-400 hover:text-white"
                             >
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 mb-4">
+                          <p className="text-gray-500 dark:text-gray-400 mb-4">
                             A full-featured e-commerce platform built with
                             React, Next.js, and Stripe integration.
                           </p>
@@ -265,12 +265,12 @@ function ProjectSection() {
                             <Link
                               href="https://hekto-store.vercel.app/"
                               target="_blank"
-                              className="text-gray-400 hover:text-white"
+                              className="text-gray-500 dark:text-gray-400 hover:text-white"
                             >
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 mb-4">
+                          <p className="text-gray-500 dark:text-gray-400 mb-4">
                             Web-App for mobile to purchase online furtinure
                             easily and real time update
                           </p>
@@ -306,12 +306,12 @@ function ProjectSection() {
                             <Link
                               href="https://marvix-blog.vercel.app/"
                               target="_blank"
-                              className="text-gray-400 hover:text-white"
+                              className="text-gray-500 dark:text-gray-400 hover:text-white"
                             >
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 mb-4">
+                          <p className="text-gray-500 dark:text-gray-400 mb-4">
                             Collaborative task management platform with
                             real-time updates and team features.
                           </p>
@@ -346,12 +346,12 @@ function ProjectSection() {
                             <Link
                               href="https://governorsindh-seven.vercel.app/"
                               target="_blank"
-                              className="text-gray-400 hover:text-white"
+                              className="text-gray-500 dark:text-gray-400 hover:text-white"
                             >
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 mb-4">
+                          <p className="text-gray-500 dark:text-gray-400 mb-4">
                             A clone of the official website of the Governor of
                             Sindh, Pakistan.
                           </p>
@@ -390,12 +390,12 @@ function ProjectSection() {
                             <Link
                               href="https://marjan-unit-converter.streamlit.app/"
                               target="_blank"
-                              className="text-gray-400 hover:text-white"
+                              className="text-gray-500 dark:text-gray-400 hover:text-white"
                             >
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 mb-4">
+                          <p className="text-gray-500 dark:text-gray-400 mb-4">
                             A basic unit converter web application.
                           </p>
                           <div className="flex flex-wrap gap-2">
@@ -426,12 +426,12 @@ function ProjectSection() {
                             <Link
                               href="https://password-strength-measure.streamlit.app/"
                               target="_blank"
-                              className="text-gray-400 hover:text-white"
+                              className="text-gray-500 dark:text-gray-400 hover:text-white"
                             >
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 mb-4">
+                          <p className="text-gray-500 dark:text-gray-400 mb-4">
                             A web application that checks the strength of a
                             password.
                           </p>
@@ -463,12 +463,12 @@ function ProjectSection() {
                             <Link
                               href="https://bmi-measure.streamlit.app/"
                               target="_blank"
-                              className="text-gray-400 hover:text-white"
+                              className="text-gray-500 dark:text-gray-400 hover:text-white"
                             >
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 mb-4">
+                          <p className="text-gray-500 dark:text-gray-400 mb-4">
                             A web application that calculates the Body Mass
                             Index (BMI) based on user input.
                           </p>
@@ -500,12 +500,12 @@ function ProjectSection() {
                             <Link
                               href="https://secure-data-encryption-by-marjan.streamlit.app/"
                               target="_blank"
-                              className="text-gray-400 hover:text-white"
+                              className="text-gray-500 dark:text-gray-400 hover:text-white"
                             >
                               <ExternalLink className="w-5 h-5" />
                             </Link>
                           </div>
-                          <p className="text-gray-400 mb-4">
+                          <p className="text-gray-500 dark:text-gray-400 mb-4">
                             A web application that encrypts and decrypts data
                             using a secure algorithm.
                           </p>
