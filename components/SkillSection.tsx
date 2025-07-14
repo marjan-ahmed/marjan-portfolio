@@ -117,7 +117,7 @@ function SkillSection() {
                       <SiSupabase />
                     </span>
                   </div>
-                  <span className="text-sm">Docker</span>
+                  <span className="text-sm">Supabase</span>
                 </div>
               </div>
             </div>

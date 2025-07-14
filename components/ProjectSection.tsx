@@ -400,7 +400,7 @@ function ProjectSection() {
                           </p>
                           <div className="flex flex-wrap gap-2">
                             <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">
-                              Streanlit
+                              Streamlit
                             </span>
                             <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">
                               UV
@@ -437,7 +437,7 @@ function ProjectSection() {
                           </p>
                           <div className="flex flex-wrap gap-2">
                             <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">
-                              Streanlit
+                              Streamlit
                             </span>
                             <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">
                               UV
@@ -474,7 +474,7 @@ function ProjectSection() {
                           </p>
                           <div className="flex flex-wrap gap-2">
                             <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">
-                              Streanlit
+                              Streamlit
                             </span>
                             <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">
                               UV
@@ -511,7 +511,7 @@ function ProjectSection() {
                           </p>
                           <div className="flex flex-wrap gap-2">
                             <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">
-                              Streanlit
+                              Streamlit
                             </span>
                             <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">
                               UV

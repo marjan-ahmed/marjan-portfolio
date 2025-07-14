@@ -34,7 +34,7 @@ function ContactSection() {
           <div className="flex flex-col md:flex-row items-start">
             <div className="md:w-1/4 mb-8 md:mb-0 text-center md:text-left">
               <h2 className="text-5xl sm:text-6xl font-bold tracking-tighter text-gray-900 dark:text-gray-200">SAY HI</h2>
-              <p className="text-gray-400 dark:text-gray-400 mt-2 font-light">Let's work together</p>
+              <p className="text-gray-500 dark:text-gray-400 mt-2">Let's work together</p>
             </div>
             <div className="md:w-3/4">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -44,45 +44,63 @@ function ContactSection() {
                     onSubmit={handleSubmit}
                     className="space-y-6"
                   >
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-light text-gray-900 dark:text-gray-300 mb-2">
-                        Name
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        className="w-full bg-transparent border border-gray-800 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-800 dark:text-white focus:outline-none focus:border-purple-500"
-                        placeholder="Your name"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-light text-gray-900 dark:text-gray-300 mb-2">
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        className="w-full bg-transparent border border-gray-800 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-800 dark:text-white focus:outline-none focus:border-purple-500"
-                        placeholder="your@email.com"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-light text-gray-900 dark:text-gray-300 mb-2">
-                        Message
-                      </label>
-                      <textarea
-                        name="message"
-                        id="message"
-                        rows={5}
-                        className="w-full bg-transparent border border-gray-800 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-800 dark:text-white focus:outline-none focus:border-purple-500"
-                        placeholder="Your message"
-                        required
-                      ></textarea>
-                    </div>
+                  <div className="relative w-full">
+ <input
+  type="text"
+  name="name"
+  id="name"
+  placeholder=" "
+  required
+  className="peer w-full bg-transparent border border-gray-800 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-800 dark:text-white focus:outline-none focus:border-purple-500"
+/>
+
+  <label
+    htmlFor="name"
+    className="absolute left-4  -translate-y-1/2 text-sm font-light text-gray-900 dark:text-gray-300 transition-all duration-200 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-0 peer-focus:text-xs peer-focus:text-purple-500 bg-white dark:bg-black px-1"
+  >
+    Name
+  </label>
+</div>
+ <div className="relative w-full">
+  <input
+    type="email"
+    name="email"
+    id="email"
+    placeholder=" "
+    required
+    className="peer w-full bg-transparent border border-gray-800 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-800 dark:text-white focus:outline-none focus:border-purple-500"
+  />
+  <label
+    htmlFor="email"
+    className="absolute left-4  -translate-y-1/2 text-sm font-light text-gray-900 dark:text-gray-300 transition-all duration-200 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-0 peer-focus:text-xs peer-focus:text-purple-500 bg-white dark:bg-black px-1"
+  >
+    Email
+  </label>
+</div>
+
+
+
+
+                    <div className="relative w-full">
+  <textarea
+    name="message"
+    id="message"
+    rows={5}
+    placeholder=" "
+    required
+    className="peer w-full bg-transparent border border-gray-800 dark:border-gray-600 rounded-lg px-4 py-3 text-gray-800 dark:text-white focus:outline-none focus:border-purple-500 resize-none"
+  ></textarea>
+
+  <label
+    htmlFor="message"
+    className="absolute left-4 top-1/2 -translate-y-1/2 text-sm font-light text-gray-900 dark:text-gray-300 transition-all duration-200 ease-in-out
+      peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2
+      peer-focus:top-0 peer-focus:text-xs peer-focus:text-purple-500 bg-white dark:bg-black px-1"
+  >
+    Message
+  </label>
+</div>
+
                     <button
                       type="submit"
                       className="bg-purple-600 cursor-pointer text-white px-6 py-3 rounded-lg flex items-center justify-center hover:opacity-90 transition-opacity w-full sm:w-auto"
