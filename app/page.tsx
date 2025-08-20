@@ -44,7 +44,7 @@ export default function Home() {
               <div className="relative w-56 h-56 sm:w-64 sm:h-64">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-400 to-teal-300 opacity-20 blur-xl"></div>
                 <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-black">
-                  <Image src="/IMG-20250817-WA0000.jpg" alt="Lucas" fill className="object-cover" priority />
+                  <Image src="/IMG-20250816-WA0069.jpg" alt="Lucas" fill className="object-cover" priority />
                 </div>
               </div>
             </div>
