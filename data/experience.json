@@ -1,0 +1,20 @@
+[
+  {
+    "technology": "TypeScript",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    "backgroundColor": "#6cb6e7",
+    "order": 10
+  },
+  {
+    "technology": "React",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    "backgroundColor": "#cceefa",
+    "order": 20
+  },
+  {
+    "technology": "Next.js",
+    "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    "backgroundColor": "#d1d5db",
+    "order": 30
+  }
+]

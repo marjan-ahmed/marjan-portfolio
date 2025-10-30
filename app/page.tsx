@@ -1,12 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
-import SkillSection from "@/components/SkillSection"
-import ProjectSection from "@/components/ProjectSection"
-import XP from "@/components/XP"
+import SkillSection from "@/components/SkillSectionDynamic"
+import ProjectSection from "@/components/ProjectSectionDynamic"
+import XP from "@/components/XPDynamic"
 import ContactSection from "@/components/ContactSection"
-import Edu from "@/components/Edu"
+import Edu from "@/components/EduDynamic"
 import BackToTopButton from "@/components/BackToTop"
-import Testimonial from "@/components/Testimonial"
+import Testimonial from "@/components/TestimonialServer"
 
 export default function Home() {
 

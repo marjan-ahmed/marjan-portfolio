@@ -1,0 +1,98 @@
+[
+  {
+    "name": "React JS",
+    "category": "frontend",
+    "icon": "FaReact",
+    "iconColor": "bg-[#61dafb]",
+    "textColor": "text-black",
+    "order": 10
+  },
+  {
+    "name": "React Native",
+    "category": "frontend",
+    "icon": "TbBrandReactNative",
+    "iconColor": "bg-[#61dafb]",
+    "textColor": "text-black",
+    "order": 20
+  },
+  {
+    "name": "Next.JS",
+    "category": "frontend",
+    "icon": "TbBrandNextjs",
+    "iconColor": "bg-black",
+    "textColor": "text-white",
+    "order": 30
+  },
+  {
+    "name": "Vite",
+    "category": "frontend",
+    "icon": "SiVite",
+    "iconColor": "bg-purple-600",
+    "textColor": "text-white",
+    "order": 40
+  },
+  {
+    "name": "Figma",
+    "category": "frontend",
+    "icon": "FaFigma",
+    "iconColor": "bg-black",
+    "textColor": "text-white",
+    "order": 50
+  },
+  {
+    "name": "React Testing Library",
+    "category": "frontend",
+    "icon": "FaReact",
+    "iconColor": "bg-red-500",
+    "textColor": "text-white",
+    "order": 60
+  },
+  {
+    "name": "JavaScript",
+    "category": "languages",
+    "icon": "IoLogoJavascript",
+    "iconColor": "bg-yellow-400",
+    "textColor": "text-black",
+    "order": 10
+  },
+  {
+    "name": "TypeScript",
+    "category": "languages",
+    "icon": "TS",
+    "iconColor": "bg-blue-500",
+    "textColor": "text-white",
+    "order": 20
+  },
+  {
+    "name": "Firebase",
+    "category": "database",
+    "icon": "SiFirebase",
+    "iconColor": "bg-[#DD2C00]",
+    "textColor": "text-white",
+    "order": 10
+  },
+  {
+    "name": "Supabase",
+    "category": "database",
+    "icon": "SiSupabase",
+    "iconColor": "bg-green-600",
+    "textColor": "text-white",
+    "order": 20
+  },
+  {
+    "name": "Node.js",
+    "category": "backend",
+    "icon": "FaNode",
+    "iconColor": "bg-green-500",
+    "textColor": "text-white",
+    "order": 10
+  },
+  {
+    "name": "Prisma",
+    "category": "backend",
+    "icon": "SiPrisma",
+    "iconColor": "bg-purple-700",
+    "textColor": "text-white",
+    "order": 20
+  }
+]

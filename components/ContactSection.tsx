@@ -37,7 +37,7 @@ function ContactSection() {
               <p className="text-gray-500 dark:text-gray-400 mt-2">Let's work together</p>
             </div>
             <div className="md:w-3/4">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                   <form
                     ref={formRef}

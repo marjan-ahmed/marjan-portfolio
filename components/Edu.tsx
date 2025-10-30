@@ -69,7 +69,7 @@ function Edu() {
     <span className="text-purple-600 dark:text-purple-400 font-medium"> TypeScript</span>, 
     <span className="text-purple-600 dark:text-purple-400 font-medium"> Next.js</span>, and 
     <span className="text-purple-600 dark:text-purple-400 font-medium"> Python</span> —now building AI agents using the 
-    <span className="text-purple-600 dark:text-purple-400 font-medium"> OpenAI Agent SDK</span>.
+    <span className="text-purple-600 dark:text-purple-400 font-medium"> OpenAI Agents SDK</span>.
   </p>
 </div>
 

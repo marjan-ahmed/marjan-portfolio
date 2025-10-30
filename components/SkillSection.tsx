@@ -18,11 +18,11 @@ function SkillSection() {
             that I've been using
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
             {/* Publications */}
 
             {/* Front-end Engineer Design */}
-            <div className="border-1 border-gray-800 p-4 rounded-2xl mb-8 sm:mb-0">
+            <div className="border-1 border-gray-800 p-4 rounded-2xl">
               <h3 className="text-sm text-gray-500 mb-4 font-normal">
                 Front-end Engineer Design
               </h3>
@@ -79,7 +79,7 @@ function SkillSection() {
             </div>
 
             {/* Languages */}
-            <div className="border-1 border-gray-800 p-4 rounded-2xl mb-8 sm:mb-0">
+            <div className="border-1 border-gray-800 p-4 rounded-2xl">
               <h3 className="text-sm text-gray-500 mb-4 font-normal">
                 Languages
               </h3>
@@ -102,7 +102,7 @@ function SkillSection() {
             </div>
 
             {/* DevOps */}
-            <div className="mb-8 sm:mb-0 border-1 border-gray-800 p-4 rounded-2xl">
+            <div className="border-1 border-gray-800 p-4 rounded-2xl">
               <h3 className="text-sm text-gray-500 mb-4 font-normal">Database</h3>
               <div className="space-y-3">
                 <div className="flex items-center">

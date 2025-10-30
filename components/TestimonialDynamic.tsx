@@ -11,27 +11,16 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel"
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import type { Testimonial as TestimonialType } from '@/types/sanity'
 
-const testimonials = [
-  {
-    message: "A beautifully designed website with a clean layout, clear data visuals, and seamless video integration. Both intuitive and visually appealing, truly a pleasure to explore.",
-    name: "Zain Ali Arain",
-    role: "NASA Space App Challenge Hackathon Team Leader",
-  },
-  {
-    message: "We love your work on the website, a beautiful and well built website that fulfills every function we envisioned",
-    name: "Anas Moeen",
-    role: "CEO of Reintechs",
-  },
-]
+// Client component that receives testimonials as props
+export default function TestimonialDynamic({ testimonials }: { testimonials: TestimonialType[] }) {
+  const [api, setApi] = useState<CarouselApi | null>(null)
+  const [current, setCurrent] = useState(0)
+  const [count, setCount] = useState(0)
 
-export default function Testimonial() {
-  const [api, setApi] = React.useState<CarouselApi | null>(null)
-  const [current, setCurrent] = React.useState(0)
-  const [count, setCount] = React.useState(0)
-
-  React.useEffect(() => {
+  useEffect(() => {
     if (!api) return
 
     setCount(api.scrollSnapList().length)
@@ -41,6 +30,20 @@ export default function Testimonial() {
       setCurrent(api.selectedScrollSnap())
     })
   }, [api])
+
+  if (testimonials.length === 0) {
+    return (
+      <section className="py-16 border-t border-gray-800" id="testimonials">
+        <div className="container max-w-4xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-400">What People Say</h2>
+            <p className="text-gray-600 dark:text-gray-400 mt-2 font-light">A few kind words from awesome users</p>
+          </div>
+          <p className="text-gray-500 text-center">No testimonials available yet.</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="py-16 border-t border-gray-800" id="testimonials">
@@ -52,13 +55,13 @@ export default function Testimonial() {
 
         <Carousel setApi={setApi} className="w-full max-w-2xl mx-auto">
           <CarouselContent>
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index}>
+            {testimonials.map((testimonial) => (
+              <CarouselItem key={testimonial._id}>
                 <div className="relative">
                   <div className="absolute top-0 left-0 w-full h-full bg-zinc-200 dark:bg-zinc-800 rounded-xl translate-y-3 translate-x-3 z-0" />
                   <div className="relative bg-gray-100 dark:bg-zinc-900 shadow-zinc-600 shadow-sm border-none rounded-xl p-6 sm:p-8 z-10">
                     <div className="flex items-center gap-1 mb-4">
-                      {Array(5).fill(null).map((_, i) => (
+                      {Array(testimonial.rating || 5).fill(null).map((_, i) => (
                         <StarIcon key={i} className="text-yellow-400 w-4 h-4 fill-yellow-400" />
                       ))}
                     </div>
@@ -75,12 +78,11 @@ export default function Testimonial() {
 
           <div className="flex justify-center gap-4 mt-6">
             <CarouselPrevious className="static translate-y-0">
-  <Button variant="outline">Previous</Button>
-</CarouselPrevious>
-<CarouselNext className="static translate-y-0">
-  <Button variant="outline">Next</Button>
-</CarouselNext>
-
+              <Button variant="outline">Previous</Button>
+            </CarouselPrevious>
+            <CarouselNext className="static translate-y-0">
+              <Button variant="outline">Next</Button>
+            </CarouselNext>
           </div>
 
           {/* Custom Dots */}

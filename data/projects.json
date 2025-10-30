@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Clima Website",
+    "description": "A Hackathon project that provides information about the climate.",
+    "category": "html",
+    "imagePath": "/public/project4.png",
+    "liveUrl": "https://clima-webapp-project.vercel.app/",
+    "technologies": ["HTML", "CSS", "JS"],
+    "order": 10
+  },
+  {
+    "title": "Asphalt Lengends - Webpage Clone",
+    "description": "It is my favourite game which I created the same website clone of it",
+    "category": "html",
+    "imagePath": "/public/asphaltlegends.vercel.app_.png",
+    "liveUrl": "https://asphaltlegends.vercel.app/",
+    "technologies": ["HTML", "CSS", "JS"],
+    "order": 20
+  },
+  {
+    "title": "Joke Engine",
+    "description": "A simple web application that generates random jokes using the JokeAPI.",
+    "category": "html",
+    "imagePath": "/public/joke-engine.vercel.app_.png",
+    "liveUrl": "https://joke-engine.vercel.app/",
+    "technologies": ["HTML", "CSS", "JS", "Random Dad Joke API"],
+    "order": 30
+  },
+  {
+    "title": "Dynamic Resume Builder",
+    "description": "A web application that allows users to create and download their resumes in PDF format.",
+    "category": "html",
+    "imagePath": "/public/dynamic-resume-builder-six-lake.vercel.app_.png",
+    "liveUrl": "https://dynamic-resume-builder-six-lake.vercel.app/",
+    "technologies": ["HTML", "CSS", "JS"],
+    "order": 40
+  },
+  {
+    "title": "Nike Clone Website",
+    "description": "A full-featured e-commerce platform built with React, Next.js, and Stripe integration.",
+    "category": "nextjs",
+    "imagePath": "/public/project1.png",
+    "liveUrl": "https://nike-clone-version.vercel.app",
+    "technologies": ["Next.js", "Tailwind", "ShadCN", "Supabase", "Stripe"],
+    "order": 10
+  },
+  {
+    "title": "Hekto Ecommerce Website",
+    "description": "Web-App for mobile to purchase online furtinure easily and real time update",
+    "category": "nextjs",
+    "imagePath": "/public/project2.png",
+    "liveUrl": "https://hekto-store.vercel.app/",
+    "technologies": ["Nextjs", "ShipEngine", "Sanity"],
+    "order": 20
+  },
+  {
+    "title": "Marvix - Blog Website",
+    "description": "Collaborative task management platform with real-time updates and team features.",
+    "category": "nextjs",
+    "imagePath": "/public/project3.png",
+    "liveUrl": "https://marvix-blog.vercel.app/",
+    "technologies": ["React", "Socket.io", "Node.js"],
+    "order": 30
+  },
+  {
+    "title": "Governor Sindh - Website Clone",
+    "description": "A clone of the official website of the Governor of Sindh, Pakistan.",
+    "category": "nextjs",
+    "imagePath": "/public/governorsindh-seven.vercel.app_.png",
+    "liveUrl": "https://governorsindh-seven.vercel.app/",
+    "technologies": ["Next.js", "Tailwind"],
+    "order": 40
+  },
+  {
+    "title": "Unit Converter",
+    "description": "A basic unit converter web application.",
+    "category": "python",
+    "imagePath": "/public/unit-converter.JPG",
+    "liveUrl": "https://marjan-unit-converter.streamlit.app/",
+    "technologies": ["Streamlit", "UV"],
+    "order": 10
+  },
+  {
+    "title": "Password Strength Meter",
+    "description": "A web application that checks the strength of a password.",
+    "category": "python",
+    "imagePath": "/public/password-checker.JPG",
+    "liveUrl": "https://password-strength-measure.streamlit.app/",
+    "technologies": ["Streamlit", "UV"],
+    "order": 20
+  },
+  {
+    "title": "BMI (Body Mass Index) Calculator",
+    "description": "A web application that calculates the Body Mass Index (BMI) based on user input.",
+    "category": "python",
+    "imagePath": "/public/bmi.JPG",
+    "liveUrl": "https://bmi-measure.streamlit.app/",
+    "technologies": ["Streamlit", "UV"],
+    "order": 30
+  },
+  {
+    "title": "Secure Data Encryption",
+    "description": "A web application that encrypts and decrypts data using a secure algorithm.",
+    "category": "python",
+    "imagePath": "/public/secure-data.JPG",
+    "liveUrl": "https://secure-data-encryption-by-marjan.streamlit.app/",
+    "technologies": ["Streamlit", "UV", "hashlib", "cryptography"],
+    "order": 40
+  }
+]

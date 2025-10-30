@@ -1,0 +1,26 @@
+[
+  {
+    "degree": "Matriculation",
+    "institution": "Nasra School",
+    "period": "2021 - 2025",
+    "description": "Currently studying science under AKU-EB with a focus on conceptual learning and critical thinking.",
+    "highlights": ["AKU-EB", "conceptual learning", "critical thinking"],
+    "order": 10
+  },
+  {
+    "degree": "WordPress Development",
+    "institution": "Professional Technologies",
+    "period": "2023",
+    "description": "Learned WordPress with hands-on experience in Elementor, themes, plugins, and WooCommerce integration.",
+    "highlights": ["WordPress", "Elementor", "themes", "plugins", "WooCommerce"],
+    "order": 20
+  },
+  {
+    "degree": "Agentic AI Developer",
+    "institution": "GIAIC - Governor Initiative for AI and Computing",
+    "period": "2024 - Present",
+    "description": "Currently enrolled, learning TypeScript, Next.js, and Python —now building AI agents using the OpenAI Agent SDK.",
+    "highlights": ["TypeScript", "Next.js", "Python", "OpenAI Agent SDK"],
+    "order": 30
+  }
+]

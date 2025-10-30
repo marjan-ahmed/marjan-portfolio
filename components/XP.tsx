@@ -15,7 +15,7 @@ function XP() {
               </h2>
               <p className="text-gray-500 dark:text-gray-400">with the most popular ecosystem around</p>
             </div>
-           <div className="md:w-3/4 grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+           <div className="md:w-3/4 grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {/* TypeScript */}
       <div className="bg-[#6cb6e7] rounded-3xl p-6 flex flex-col justify-between h-40">
         <div className="w-10 h-10 rounded-lg flex items-center justify-center">
@@ -57,7 +57,7 @@ function XP() {
     
             </div>
           </div>
-          <div className="hidden md:flexjustify-center mt-8">
+          <div className="hidden md:flex justify-center mt-8">
             <div className="flex space-x-2">
               <div className="w-6 h-2 bg-white rounded-full"></div>
               <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
