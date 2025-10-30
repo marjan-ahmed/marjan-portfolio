@@ -22,11 +22,10 @@ export default function Home() {
               <h1 className="text-4xl sm:text-5xl font-bold mb-6 md:mb-8 tracking-tight">
                 Hi, I'm Marjan
               </h1>
-              <p className="text-gray-600 dark:text-gray-400 mb-2 font-light">
-                During these <span className="text-black dark:text-white">2 years</span> as Front-End Software Engineer. My role has
-                extended beyond coding to effective communication with various departments, to define new features and
-                spearheading the development of new apps.
-              </p>
+           <p className="text-gray-600 dark:text-gray-400 mb-2 font-light">
+  Over <span className="text-black dark:text-white">2 years</span> as a Full-Stack Developer, I build responsive web apps, collaborate with teams, integrate AI-driven solutions including <span className="text-black dark:text-white">Agentic AI</span>, leverage headless CMS like Sanity, and contribute to scalable, innovative projects solving real-world problems.
+</p>
+
               <div className="mt-8 md:mt-10 flex items-center justify-center md:justify-start space-x-6">
                 <a
                   href="/Marjan Ahmed Resume.pdf"
