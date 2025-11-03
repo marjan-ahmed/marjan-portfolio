@@ -22,8 +22,8 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: "Marjan Ahmed - Portfolio",
-  description: "Front-End Software Engineer Portfolio",
+  title: "Marjan Ahmed - Full-Stack & Agentic AI Developer Portfolio",
+  description: "Explore the portfolio of Marjan Ahmed, showcasing full-stack web development projects, agentic AI experiments, and innovative software solutions.",
 };
 
 export default function RootLayout({
