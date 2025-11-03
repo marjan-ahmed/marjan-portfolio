@@ -4,14 +4,16 @@ import {
   skillsQuery, 
   experienceQuery, 
   educationQuery, 
-  testimonialsQuery 
+  testimonialsQuery,
+  workExperienceQuery
 } from './sanity.queries'
 import type { 
   Project, 
   Skill, 
   Experience, 
   Education, 
-  Testimonial 
+  Testimonial,
+  WorkExperience
 } from '@/types/sanity'
 
 // Fetch functions with error handling
@@ -56,6 +58,15 @@ export async function getTestimonials(): Promise<Testimonial[]> {
     return await client.fetch(testimonialsQuery)
   } catch (error) {
     console.error('Error fetching testimonials:', error)
+    return []
+  }
+}
+
+export async function getWorkExperience(): Promise<WorkExperience[]> {
+  try {
+    return await client.fetch(workExperienceQuery)
+  } catch (error) {
+    console.error('Error fetching work experience:', error)
     return []
   }
 }

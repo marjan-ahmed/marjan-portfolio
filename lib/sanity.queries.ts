@@ -87,3 +87,19 @@ export const testimonialsQuery = groq`
     order
   }
 `
+
+// Work Experience queries
+export const workExperienceQuery = groq`
+  *[_type == "workExperience"] | order(order asc) {
+    _id,
+    title,
+    company,
+    companyLink,
+    location,
+    startDate,
+    endDate,
+    description,
+    technologies,
+    order
+  }
+`

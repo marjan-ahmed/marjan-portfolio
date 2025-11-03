@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Web Developer",
+    "company": "Reintechs",
+    "companyLink": "https://reintechs.com",
+    "location": "Remote",
+    "startDate": "June 2025",
+    "endDate": "Present",
+    "description": "Built websites and ecommerce store with the help of WordPress and WooCommerce as well as Next.js.",
+    "technologies": ["WordPress", "WooCommerce", "Next.js"],
+    "order": 10
+  }
+]

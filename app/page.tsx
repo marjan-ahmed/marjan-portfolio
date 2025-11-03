@@ -59,7 +59,7 @@ export default function Home() {
       {/* Technologies Section */}
       <section className="py-12 sm:py-16 md:py-20">
         <div className="container max-w-6xl px-4 mx-auto text-center">
-          {["Javascript", "React", "Coffee"].map((tech) => (
+          {["TypeScript", "Next.js", "Coffee"].map((tech) => (
             <h2
               key={tech}
               className="text-4xl sm:text-5xl bg-gradient-to-r from-purple-500 to-purple-300 dark:from-purple-400 dark:to-purple-200 bg-clip-text text-transparent font-bold mb-6 sm:mb-8 tracking-tight"

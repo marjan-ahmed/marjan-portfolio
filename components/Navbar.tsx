@@ -28,7 +28,7 @@ function Navbar() {
                 href={`#${section}`}
                 className="text-gray-500 dark:text-gray-200 hover:text-purple-500 dark:hover:text-purple-500 transition-all duration-300 ease-in-out border-b-2 border-transparent hover:border-purple-500"
               >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
+                {section === "work-experience" ? "Work" : section.charAt(0).toUpperCase() + section.slice(1)}
               </Link>
             ))}
           </div>
@@ -71,14 +71,14 @@ function Navbar() {
           </button>
 
           <div className="flex flex-col items-center space-y-6 text-xl">
-            {["education", "experience", "projects", "testimonials", "contact"].map(section => (
+            {["education", "work-experience", "experience", "projects", "testimonials", "contact"].map(section => (
               <Link
                 key={section}
                 href={`#${section}`}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-black dark:text-gray-300 hover:text-purple-500 transition-all duration-300 ease-in-out border-b-2 border-transparent hover:border-purple-500"
               >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
+                {section === "work-experience" ? "Work" : section.charAt(0).toUpperCase() + section.slice(1)}
               </Link>
             ))}
           </div>

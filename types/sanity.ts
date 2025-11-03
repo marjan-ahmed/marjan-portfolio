@@ -45,3 +45,16 @@ export interface Testimonial {
   rating: number
   order?: number
 }
+
+export interface WorkExperience {
+  _id: string
+  title: string
+  company: string
+  companyLink?: string
+  location?: string
+  startDate: string
+  endDate: string
+  description: string
+  technologies?: string[]
+  order?: number
+}
