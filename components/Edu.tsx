@@ -4,7 +4,7 @@ function Edu() {
   return (
     <>
       {/* Education Section */}
-      <section className="py-12 sm:py-16 md:py-20 border-t border-gray-300 dark:border-gray-800 bg-white dark:bg-black text-gray-800 dark:text-gray-100" id="education">
+      <section className="py-12 sm:py-16 md:py-20 border-t border-gray-300 dark:border-gray-800 bg-gray-50 dark:bg-black text-gray-800 dark:text-gray-100" id="education">
         <div className="container max-w-6xl px-4 mx-auto">
           <div className="flex flex-col md:flex-row items-start">
             <div className="md:w-1/4 mb-8 md:mb-0 text-center md:text-left">

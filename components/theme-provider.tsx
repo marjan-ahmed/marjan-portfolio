@@ -7,5 +7,11 @@ export function ThemeProvider({
   children,
   ...props
 }: React.ComponentProps<typeof NextThemesProvider>) {
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+  // defaultTheme: 'system' ensures the site uses the OS preference by default
+  // attribute: 'class' makes next-themes toggle the `class` on <html> (works with Tailwind's dark variant)
+  return (
+    <NextThemesProvider defaultTheme="system" attribute="class" {...props}>
+      {children}
+    </NextThemesProvider>
+  )
 }

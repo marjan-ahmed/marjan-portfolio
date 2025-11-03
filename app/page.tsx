@@ -11,7 +11,7 @@ import Testimonial from "@/components/TestimonialServer"
 export default function Home() {
 
   return (
-    <main className="min-h-screen bg-white text-black dark:bg-black dark:text-white transition-colors duration-300">
+    <main className="min-h-screen bg-gray-50 text-black dark:bg-black dark:text-white transition-colors duration-300">
       <BackToTopButton />
 
       {/* Hero Section */}
@@ -19,7 +19,9 @@ export default function Home() {
         <div className="container max-w-6xl px-4 mx-auto">
           <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
             <div className="md:w-1/2 text-center md:text-left">
-              <h1 className="text-4xl sm:text-5xl font-bold mb-6 md:mb-8 tracking-tight">
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6 md:mb-8 tracking-tight dark:bg-gradient-to-r dark:from-gray-50 lg:dark:via-gray-400 lg:dark:to-gray-700 dark:via-gray-300 dark:to-gray-600
+    dark:bg-clip-text dark:text-transparent
+">
                 Hi, I'm Marjan
               </h1>
            <p className="text-gray-600 dark:text-gray-400 mb-2 font-light">

@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <>
       {/* Navigation */}
-      <nav className="flex bg-transparent justify-center items-center py-3">
+      <nav className="flex bg-gray-50 dark:bg-transparent justify-center items-center py-3">
         <div className="container max-w-6xl px-4 flex justify-between items-center">
           <Link
             href="/"
@@ -26,7 +26,7 @@ function Navbar() {
               <Link
                 key={section}
                 href={`#${section}`}
-                className="text-gray-500 dark:text-gray-200 hover:text-purple-500 dark:hover:text-purple-500 transition-colors border-b-2 border-transparent hover:border-purple-500"
+                className="text-gray-500 dark:text-gray-200 hover:text-purple-500 dark:hover:text-purple-500 transition-all duration-300 ease-in-out border-b-2 border-transparent hover:border-purple-500"
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </Link>
@@ -37,13 +37,13 @@ function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <ModeToggle />
             <Link href="https://github.com/marjan-ahmed" target="_blank" aria-label="GitHub">
-              <Github className="w-5 h-5 text-gray-500 hover:text-purple-500 transition-colors dark:text-gray-200 dark:hover:text-white" />
+              <Github className="w-5 h-5 text-gray-500 hover:text-purple-500 transition-all duration-300 ease-in-out hover:scale-110 dark:text-gray-200 dark:hover:text-white" />
             </Link>
             <Link href="https://linkedin.com/in/hafizmarjanahmed" target="_blank" aria-label="LinkedIn">
-              <Linkedin className="w-5 h-5 text-gray-500 hover:text-purple-500 transition-colors dark:text-gray-200 dark:hover:text-white" />
+              <Linkedin className="w-5 h-5 text-gray-500 hover:text-purple-500 transition-all duration-300 ease-in-out hover:scale-110 dark:text-gray-200 dark:hover:text-white" />
             </Link>
             <Link href="mailto:marjanahmed.dev@gmail.com" aria-label="Email">
-              <Mail className="w-5 h-5 text-gray-500 hover:text-purple-500 transition-colors dark:text-gray-200 dark:hover:text-white" />
+              <Mail className="w-5 h-5 text-gray-500 hover:text-purple-500 transition-all duration-300 ease-in-out hover:scale-110 dark:text-gray-200 dark:hover:text-white" />
             </Link>
           </div>
 
@@ -62,7 +62,7 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-black/95 fixed inset-0 z-50 flex flex-col items-center justify-center px-4">
+        <div className="md:hidden bg-gray-50 dark:bg-black/95 fixed inset-0 z-50 flex flex-col items-center justify-center px-4">
           <button
             className="absolute top-6 right-6 text-gray-500 dark:hover:text-white"
             onClick={() => setMobileMenuOpen(false)}
@@ -76,7 +76,7 @@ function Navbar() {
                 key={section}
                 href={`#${section}`}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-black dark:text-gray-300 hover:text-purple-500 transition-colors"
+                className="text-black dark:text-gray-300 hover:text-purple-500 transition-all duration-300 ease-in-out border-b-2 border-transparent hover:border-purple-500"
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </Link>
@@ -85,13 +85,13 @@ function Navbar() {
 
           <div className="flex items-center space-x-6 mt-10">
             <Link href="https://github.com/marjan-ahmed" target="_blank" aria-label="GitHub">
-              <Github className="w-6 h-6 text-black dark:text-gray-400 dark:hover:text-white transition-colors" />
+              <Github className="w-6 h-6 text-black dark:text-gray-400 dark:hover:text-white transition-all duration-300 ease-in-out hover:scale-110" />
             </Link>
             <Link href="https://linkedin.com/in/hafizmarjanahmed" target="_blank" aria-label="LinkedIn">
-              <Linkedin className="w-6 h-6 text-black dark:text-gray-400 dark:hover:text-white transition-colors" />
+              <Linkedin className="w-6 h-6 text-black dark:text-gray-400 dark:hover:text-white transition-all duration-300 ease-in-out hover:scale-110" />
             </Link>
             <Link href="mailto:marjanahmed.dev@gmail.com" aria-label="Email">
-              <Mail className="w-6 h-6 text-black dark:text-gray-400 dark:hover:text-white transition-colors" />
+              <Mail className="w-6 h-6 text-black dark:text-gray-400 dark:hover:text-white transition-all duration-300 ease-in-out hover:scale-110" />
             </Link>
           </div>
         </div>
