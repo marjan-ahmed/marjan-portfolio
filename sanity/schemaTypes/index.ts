@@ -4,7 +4,8 @@ import skill from '../schemas/skill'
 import experience from '../schemas/experience'
 import education from '../schemas/education'
 import testimonial from '../schemas/testimonial'
+import workExperience from '../schemas/workExperience'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [project, skill, experience, education, testimonial],
+  types: [project, skill, experience, education, testimonial, workExperience],
 }
