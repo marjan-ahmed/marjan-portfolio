@@ -22,8 +22,20 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: "Marjan Ahmed - Full-Stack & Agentic AI Developer Portfolio",
+  title: "Marjan Ahmed - Developer Portfolio",
   description: "Explore the portfolio of Marjan Ahmed, showcasing full-stack web development projects, agentic AI experiments, and innovative software solutions.",
+  authors: [{ name: "Muhammad Marjan Ahmed", url: "https://marjanahmed.vercel.app" }],
+  keywords: [
+    "Marjan Ahmed",
+    "Muhammad Marjan Ahmed",
+    "Full-Stack Developer",
+    "Agentic AI Developer",
+    "Next.js Portfolio",
+    "AI Engineer",
+    "Open Source Contributor",
+    "Open AI SDK",
+    "Open AI Agents SDK",
+  ],
 };
 
 export default function RootLayout({

@@ -112,6 +112,7 @@ Just open the file and copy the data into Sanity Studio!
 ```tsx
 // app/page.tsx or any Server Component
 import { getProjects } from '@/lib/sanity.utils'
+import Image from 'next/image'
 
 export default async function ProjectSection() {
   const projects = await getProjects()
@@ -122,7 +123,12 @@ export default async function ProjectSection() {
         <div key={project._id}>
           <h3>{project.title}</h3>
           <p>{project.description}</p>
-          <img src={project.imageUrl} alt={project.title} />
+          <Image 
+            src={project.imageUrl} 
+            alt={project.title}
+            width={400}
+            height={300}
+          />
         </div>
       ))}
     </div>
