@@ -19,11 +19,12 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
   weight: ["300", "400", "500", "600", "700"],
-})
+});
 
 export const metadata: Metadata = {
-  title: "Marjan Ahmed - Developer Portfolio",
-  description: "Explore the portfolio of Marjan Ahmed, showcasing full-stack web development projects, agentic AI experiments, and innovative software solutions.",
+  title: "Marjan Ahmed - Full-Stack & Agentic AI Developer Portfolio",
+  description:
+    "Explore the portfolio of Marjan Ahmed, showcasing full-stack web development projects, agentic AI experiments, and innovative software solutions.",
   authors: [{ name: "Muhammad Marjan Ahmed", url: "https://marjanahmed.vercel.app" }],
   keywords: [
     "Marjan Ahmed",
@@ -36,6 +37,9 @@ export const metadata: Metadata = {
     "Open AI SDK",
     "Open AI Agents SDK",
   ],
+  verification: {
+    google: "TsiePAP5LOUi2bOZo6Cnnm8Bjq5YLZe9vXU5SbZxmMQ",
+  },
 };
 
 export default function RootLayout({
@@ -46,18 +50,18 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.className}  antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.className} antialiased`}
         cz-shortcut-listen="true"
       >
         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Navbar />
-            {children}
-            <Footer />
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

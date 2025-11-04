@@ -71,7 +71,7 @@ function Navbar() {
           </button>
 
           <div className="flex flex-col items-center space-y-6 text-xl">
-            {["education", "work-experience", "experience", "projects", "testimonials", "contact"].map(section => (
+            {["education", "experience", "projects", "testimonials", "contact"].map(section => (
               <Link
                 key={section}
                 href={`#${section}`}
